@@ -1,0 +1,1176 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COL_DataWedge
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1b18400b000965fc
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAAChz6j3LEFxNks0ASTDEBEmipiw50hrVjsM9yg+I6L2Om4ugwOWgrHqfmhPlsbdWwP+7Yf9SoiQG+AGoQHIoVO7SmYzmMbKZU9V9hcm9lkadV8lqpLEDb/9NznAvPGTFZFy5dHYCZ7U6bJ376ded5wU9CmqWNSqQaWrZctLzPrhHowPS5TXqGhA8h5He52oEgslN1mK/JxfEZnwHB8IqB382DrKTH86cBlETcmnGXKbIfQV3tH9f55yMkNlgeLaZ6ktCt2iWsZj8tKQG1QS8hbe2NzkT+sdhrpPt09ODHbJyAHVJ46mhLfswL5X9eLT5loSDTMN+4TK6xsf70UTwSL1IUL10JhfWIYfiIlTAusUBbQ6AONbpCzUmXtoeHOCmcFOYRJAng4Rfr1cmVSZ6I5J5g1DZb/Dr0nwd/vqxw3ybin31OZotxd4jjV3g5Avn0EHyn0OflgIoo5kxCPafnkz7xflJVKAaqD9OWwqTnFCQIWOlFM=
+     code : |1+
+      /////////////////////////////////////////////////////////////////////////////////////
+      //	DataWedge component version 6.7
+      ////////////////////////////////////////////////////////////////////////////////////
+      //
+      // This component aims to simplify the use of DataWedge from WINDEV Mobile.
+      // It is compatible with DataWedge APIs version 6.7 or later.
+      //
+      // DataWedge documentation as well as tutorials, guides and examples are available at the following address:
+      // http://techdocs.zebra.com/datawedge/6-7/guide/about/
+      //
+      // This component uses 2 java libraries:
+      //
+      // - DataWedgeProfileIntentsWrapper: 
+      // 		A set of classes to simplify the development of DataWedge APIs
+      // 		https://github.com/ltrudu/DataCaptureReceiver
+      //
+      // - WindevMobileDataWedgeWrapper : 
+      // 		A facade to Java methods that implements the classes from the DataCaptureReceiver library
+      // 		https://github.com/ltrudu/WindevMobileDataWedgeWrapper
+      //
+      //	In order to compile the project, these 2 libraries must be added to the Android application generation.
+      //	To do so, open the application generation window: click on "Generate the Android application"
+      //	Add artifacts in the step: Integration of remote dependencies
+      //	Use the following information do describe the artifacts to integrate:
+      //	- DataWedgeProfileIntentsWrapper
+      //		Group: com.zebra.datawedgeprofileintentswrapper
+      //		Name: datawedgeprofileintentswrapper
+      //		Version: 6.7
+      //
+      //	- WindevMobileDataWedgeWrapper
+      //		Group: com.zebra.windevmobiledatawedgewrapper
+      //		Name: windevmobiledatawedgewrapper
+      //		Version: 6.7
+      //
+      //	Both artifacts are available on the JCenter repository.
+      //
+      //	The component offers 2 sets of procedures:
+      //	- 	Procedures whose name start with ZebraDWEasy: aimed at simplifying the implementation
+      //		of the scanner. The window WIN_Simple_Scan is a simple example of how to implement the scanner via
+      //		DataWedge APIs
+      //  
+      // 	-	Procedures whose name does not include the word "easy": aimed at providing access to advanced features
+      //		of DataWedge such as profile creation, initialization of parameters, scanner control, etc.
+      //		The window WIN_Advanced_Scan is an example of how to use advanced features 	
+      //
+      //	The parameter classes in the set are used to configure the profile and modify the attributes
+      //	of the scanner dynamically.
+      //
+      //	CZebraDWProfileConfiguration: 
+      // 			Class with all the profile settings as described in the DataWedge API documentation:
+      //			http://techdocs.zebra.com/datawedge/6-7/guide/api/setconfig/
+      // 			The tree structure of its members corresponds to the tree structure of the Bundle that must bu passed to the intent described in the
+      // 			documentation.						
+      //
+      //	CZebraDWScannerSettingsModification:
+      //			Class with all the parameters used to modify the scanner attributes dynamically:
+      //			The available parameters are described in the DataWedge API documentation:
+      //			http://techdocs.zebra.com/datawedge/6-7/guide/api/switchscannerparams/
+      //
+      //	
+      //	The DWEasy procedures are:
+      // - ZebraDWEasyInitialize: Initializes the component (to be used in the end of initialization procedure of the window)
+      // ZebraDWEasyStart: Starts the component by giving it the name of the procedure that will be called to process received scans (to be used in the focus gain procedure of the window)
+      // - ZebraDWEasyStop: Stops the component (the scan procedure is no longer called, to be used in the procedure called when the window goes to the background).
+      // - ZebraDWEasyClean: Cleans the Android system objects associated with the current window (to be used in the procedure called when closing a child window that requires the scan functionality)
+      // ZebraDWEasyCleanandStop: Stops the component and cleans the system objects associated with the window (To be used in the procedure called when closing the parent window).
+      //
+      // The advanced procedures are:
+      // + DataWedge service control:
+      // 		- ZebraDWEnableDataWedge: 
+      // 			Enables the DataWedge service. 
+      // 			Once enabled, the scans will be returned to the application if a scan callback has been defined 
+      // 			via the method ZebraDWSaveScanCallback
+      // 		- ZebraDWDisableDatawedge: 
+      // 			Disables the DataWedge service. 
+      // 			Makes the scanner ignore any scan request. Once disabled, it will not be possible to scan anymore 
+      // 			via the physical button or the method ZebraDWStartScan.
+      // + Configuration of scanned data reception
+      // 		- ZebraDWSaveScanCallback: 
+      // 			Saves a WL procedure to receive the scan results.
+      //			Prototype of the procedure: CB_ProcessScan(sData is string, sSymbology est is string)
+      // 		- ZebraDWDeleteScanCallBack:
+      //			Deletes the scan callback defined via ZebraDWSaveScanCallback
+      // 			The scanner will still work, but the application will no longer process the scanned data since it will not receive the scan results.
+      // 		- ZebraDWCleanBroadcastReceiver:
+      //			Deletes the broadcast receiver associated with the window.
+      // 			The broadcast receiver is an Android object that allows receiving scan results.
+      // 			It is used in the underlying libraries. 
+      // 			It is necessary to call this method when you are in the window closing process to avoid memory leaks.
+      // + Profile management
+      // 		- ZebraDWCheckIfProfileExists: 
+      // 			Checks if a profile already exists.
+      // 		- ZebraDWCreateAProfile: 
+      // 			Creates a DataWedge profile initialized with the default values.
+      // 		- ZebraDWDeleteAProfile: 
+      // 			Deletes the specified profile.
+      // 		- ZebraDWInitializeAProfile: 
+      // 			Initializes a DataWedge profile (i.e. configures the profile settings)
+      //			By default, the profile will be initialized in CREATE_IF_NOT_EXIST mode: a profile will be created if it does not exist already
+      //			In this mode, if the profile exists, a PROFILE_ALREADY_EXISTS error will be returned.
+      //			This behavior can be changed by modifying the value of the member: clSettings.m_clMainBundle.m_eCONFIG_MODE
+      //			The possible values are: 
+      //					- CREATE_IF_NOT_EXIST: creates the profile if it does not exist already. It allows not having to create the profile beforehand. Returns an error if the profile exists already.
+      //					- OVERWRITE: overwrites the profile with new values if it exists already. Returns an error if the profile does not exist.
+      //					- UPDATE: updates the profile settings. Caution, it returns an error if the profile does not exist. 
+      // + Scanner management and control:
+      // 		- ZebraDWStartScan: 
+      // 			Starts the scanner via software. The scanner switches to scan standby. 
+      // 			If the beam is not disabled, it will light up automatically.
+      //		- ZebraDWStopScan: 
+      // 			Stops the scanner if it is in scan standby (a scan is in progress). 
+      // 			If the beam is already enabled, il will automatically turn off.
+      // 		- ZebraDWModifyScannerSettings:
+      //			Used to modify the scanner settings dynamically
+      //			This method is useful if you want to change the behavior of the scanner contextually.
+      //			ex: it is possible to enable or disable certain symbologies as needed
+      //
+      //
+      //
+      
+      
+      if InSimulatorMode() then
+      	EndProgram("This example is intended to be run on a Zebra device running on Android. It does not work in simulator mode.")
+      end
+      
+      /////////////////////////////////////////////////
+      // Initialize DataWedge
+      if not InSimulatorMode() then
+      	_DataWedgeInitialize()
+      end
+      gsDWEasyScanCallback is string 
+      gsDWEasyCallbackSuccess is string
+      gsDWEasyCallbackError is string
+      gnDWEasyTimeOut is int = 10000
+      
+     type : 720896
+  procedures :
+   -
+     name : _DataWedgeInitialize
+     procedure_id : 1952385669113020409
+     type_code : 15
+     code : |1+
+      // Imports
+      import com.zebra.datawedgeprofileintents.*;
+      import android.util.Log;
+      import android.text.TextUtils;
+      import android.content.BroadcastReceiver;
+      import android.content.Context;
+      import android.content.Intent;
+      import android.content.IntentFilter;
+      
+      import android.app.Activity;
+      import com.zebra.windevmobiledatawedgewrapper.*;
+      
+      private static void _DataWedgeInitialize(){
+      	mDataWedgeWindevMobileFacade.DataWedgeInitialise();
+      }
+      
+      // Members
+      private static String TAG = "WMDataWedge";
+      
+      // We implement here an interface for the java library to execute WL procedures
+      // by using the control inversion
+      private static DataWedgeWindevMobileFacade.IAppelProcedureWL mCallWLProcedure = new DataWedgeWindevMobileFacade.IAppelProcedureWL() {			
+      	@Override
+      	public void appelProcedureWLSS(String param1, String param2) {
+      		callWLProcedure(param1, param2);	
+      	}
+      	
+      	@Override
+      	public void appelProcedureWLSSB(String param1, String param2, boolean param3) {
+      		callWLProcedure(param1, param2, param3);	
+      	}
+      	
+      	@Override
+      	public void appelProcedureWLSSS(String param1, String param2, String param3) {
+      		callWLProcedure(param1, param2, param3);
+      	}	
+      	
+      	@Override
+      	public void appelProcedureWLSSSS(String param1, String param2, String param3, String param4) {
+      		callWLProcedure(param1, param2, param3, param4);
+      	}
+      };
+      
+      // We implement here an interface for the Java library to retrieve the context of the application
+      private static DataWedgeWindevMobileFacade.IActivityRetriever mActivityRetriever  = new DataWedgeWindevMobileFacade.IActivityRetriever() {
+      	@Override
+      	public Activity getActivity() {
+      		return getCurrentActivity();
+      	}
+      };
+      
+      // Facade class for the integration of DataWedge in WINDEV Mobile
+      private static DataWedgeWindevMobileFacade mDataWedgeWindevMobileFacade = new DataWedgeWindevMobileFacade(mCallWLProcedure, mActivityRetriever);
+      
+      
+     language : Java
+     type : 458752
+   -
+     name : _DWCheckIfProfileExists
+     procedure_id : 1952396281977320873
+     type_code : 15
+     code : |1-
+      
+      // Checks if a profile already exists
+      private static void _DWCheckIfProfileExists(final String fsProfileName, final long flTimeoutMs, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWVerifierSiLeProfilExiste(fsProfileName, flTimeoutMs, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWLogMessage
+     procedure_id : 1952634502340446501
+     type_code : 15
+     code : |1-
+      
+      // JAVA log
+      private static void _DWLogMessage(String message)
+      {
+      	Log.d(TAG, message);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWCreateAProfile
+     procedure_id : 1952648010011150135
+     type_code : 15
+     code : |1+
+      
+      // Creates a DataWedge profile initialized with the default values
+      private static void _DWCreateAProfile(final String fsProfileName, final long flTimeoutMs, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWCreerUnProfil(fsProfileName, flTimeoutMs, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWDeleteAProfile
+     procedure_id : 1952648624191550584
+     type_code : 15
+     code : |1+
+      
+      // Delete the specified profile
+      private static void _DWDeleteAProfile(final String fsProfileName, final long flTimeoutMs, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWEffacerUnProfil(fsProfileName, flTimeoutMs, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : ZebraDWInitializeAProfile
+     internal_properties : CAAAAAgAAAC2AfJEPkrsGbT0Czlm6MPqZZJeQqZFsZY+sGDJOZ7i9wCdK0rp+MT5/rZSTY5GlZ5c7Ix15v4Vc/gkzV60pDz9V+iakgxKv1q23hrwMsPsn9zBLydjBMnWos/KRPn6BGkJ2P91yt/LdKYxv/CxSUStInB2c52GQdaJNlXBhr5O/9sl3R9sD37rge6weN25DK5cABvSTUY=
+     procedure_id : 1952654787470596107
+     type_code : 15
+     code : |1+
+      // Summary: Initializes a DataWedge profile (i.e. configures the profile settings)
+      // By default, the profile will be initialized in CREATE_IF_NOT_EXIST mode: a profile will be created if it does not exist already
+      // In this mode, if the profile exists, a PROFILE_ALREADY_EXISTS error will be returned
+      // This behavior can be changed by modifying the value of the member: clSettings.m_clMainBundle.m_eCONFIG_MODE
+      // The possible values are: 
+      //		- CREATE_IF_NOT_EXIST: creates the profile if it does not exist already. It allows not having to create the profile beforehand. Returns an error if the profile exists already.
+      //		- OVERWRITE: overwrites the profile with new values if it exists already. Returns an error if the profile does not exist.
+      //		- UPDATE: updates the profile settings. Caution, it returns an error if the profile does not exist. 
+      // Syntax:
+      //ZebraDWInitializeAProfile (<clSettings> is CZebraDWProfileConfiguration, <sCallback> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	clSettings (CZebraDWProfileConfiguration): Class containing the profile configuration settings. For more information on members, refer to the DataWedge documentation: http://techdocs.zebra.com/datawedge/6-7/guide/api/setconfig/
+      //	sCallback (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // // Create the class that contains the profile settings
+      // clSettings is CZebraDWProfileConfiguration
+      // 
+      // // A profile name is specified, as well as a maximum duration before considering that the timeout has been reached
+      // clSettings.m_sProfileName = gsProfileName
+      // clSettings.m_nTimeOutMS = gnTimeOut
+      // 
+      // // Configuration of some parameters.
+      // // For more information, see: http://techdocs.zebra.com/datawedge/6-7/guide/api/setconfig/
+      // clSettings.m_clScannerPlugin.m_clDecoders.m_bdecoder_korean_3of5 = True
+      // clSettings.m_clScannerPlugin.m_clDecodersParams.m_edecoder_gs1_lim_security_level = CZebraDWProfilePluginScannerDecodersParams.SECURITY_LEVEL_1
+      // 
+      // // Initialize the configuration
+      // ZebraDWInitializeAProfile(clSettings,"WIN_Scan.CB_ProfileInitialized","WIN_Scan.CB_Error")
+      //
+      Procédure ZebraDWInitializeAProfile(clSettings is CZebraDWProfileConfiguration, sCallback is string, sCallbackError is string)
+      // Fill in the configuration structure of the profile initialization module
+      _DWCreateConfigurationInitializeProfile(clSettings)
+      // Run profile initialization
+      _DWInitializeAProfile(sCallback,sCallbackError)
+      
+     type : 458752
+   -
+     name : _DWCreateConfigurationInitializeProfile_Java
+     procedure_id : 1952658944999055245
+     type_code : 15
+     code : |1-
+      
+      // Initialize the configuration structure of the profile initialization module
+      private static void _DWCreateConfigurationInitializeProfile_Java(String profileAsJsonString)
+      {
+      	mDataWedgeWindevMobileFacade.DWCreerConfigurationInitialiserProfil_Java(profileAsJsonString);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWInitializeAProfile
+     procedure_id : 1952659078143137270
+     type_code : 15
+     code : |1+
+      private static void _DWInitializeAProfile(final String fsCallback, final String fsCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWInitialiserUnProfil(fsCallback, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWDeleteScanCallback
+     procedure_id : 1952703118738280106
+     type_code : 15
+     code : |1+
+      private static void _DWDeleteScanCallback(boolean deleteReceiver, final String sCallbackSuccess, final String sCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWEffacerCallbackDeScan(deleteReceiver, sCallbackSuccess, sCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWSaveScanCallback
+     procedure_id : 1952704729351063394
+     type_code : 15
+     code : |1+
+      private static void _DWSaveScanCallback(final String sCallbackHandleScan , final String sCallbackSuccess, final String sCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWEnregistrerCallbackDeScan(sCallbackHandleScan, sCallbackSuccess, sCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWStartScan
+     procedure_id : 1952765649167808313
+     type_code : 15
+     code : |1+
+      private static void _DWStartScan(final String fsProfileName, final long flTimeoutMs, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWDemarrerUnScan(fsProfileName, flTimeoutMs, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWStopScan
+     procedure_id : 1952768488141327509
+     type_code : 15
+     code : |1+
+      private static void _DWStopScan(final String fsProfileName, final long flTimeoutMs, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWStopperUnScan(fsProfileName, flTimeoutMs, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWModifyScannerSettings_Java
+     procedure_id : 1952768934817964710
+     type_code : 15
+     code : |1+
+      private static void _DWModifyScannerSettings_Java(final String fsCallback, final String fsCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWModifierLesParametresDuScanner_Java(fsCallback, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWCreateConfigurationModifyScannerSettings_Java
+     procedure_id : 1952769304185238041
+     type_code : 15
+     code : |1+
+      private static void _DWCreateConfigurationModifyScannerSettings_Java(String settingsAsJSONString)
+      {
+      	mDataWedgeWindevMobileFacade.DWCreerConfigurationModifierLesParametresDuScanner_Java(settingsAsJSONString);
+      }
+     language : Java
+     type : 458752
+   -
+     name : ZebraDWModifyScannerSettings
+     internal_properties : CAAAAAgAAAD6S9UMO074NZpsbbQjdScQYKfCnyIxPVz1KXSorI0IRWKN7dMzNd08rejdpRyU9rdYfYHiinps02KYFZlQK4oNcBZm37mnlknWEQc8dGugNToXjpWKDaKHVSUiuZSL2CdyD1FUSxip1rN23sUh
+     procedure_id : 1952769995675134150
+     type_code : 15
+     code : |1+
+      // Summary: Used to modify the scanner parameters dynamically
+      // This method is useful if you want to change the behavior of the scanner contextually.
+      // ex: it is possible to enable or disable certain symbologies as needed
+      // Syntax:
+      //ZebraDWModifyScannerSettings (<clConfiguration> is CZebraDWScannerSettingsModification, <sCallback> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	clConfiguration (CZebraDWScannerSettingsModification): Class containing the parameters to modify. For more information, refer to the DataWedge documentation: http://techdocs.zebra.com/datawedge/6-7/guide/api/switchscannerparams/
+      //	sCallback (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example
+      // // Create the class that will contain the scanner modification settings
+      // // Start by creating a class that contains the default settings
+      // clParameters is CZebraDWScannerSettingsModification
+      // clParameters.m_sProfileName = gsProfileName
+      // clSettings.m_nTimeOutMS = gnTimeOut
+      // // Change settings to switch to aggressive mode// clParameters.m_clScannerPlugin.m_clReaderParams.m_eaim_type = CZebraDWProfilePluginScannerReaderParams.PRESS_AND_SUSTAIN
+      // clParameters.m_clScannerPlugin.m_clReaderParams.m_nbeam_timer = 0
+      // clParameters.m_clScannerPlugin.m_clReaderParams.m_nsame_barcode_timeout = 0
+      // clParameters.m_clScannerPlugin.m_clReaderParams.m_ndifferent_barcode_timeout = 0
+      // 
+      // // Modify the parameters
+      // ZebraDWModifyScannerSettings(clParameters,"WIN_Advanced_Scan.CB_ProfileAggressive","WIN_Advanced_Scan.CB_Error")
+      
+      
+      Procédure ZebraDWModifyScannerSettings(clConfiguration is CZebraDWScannerSettingsModification, sCallback is string, sCallbackError is string)
+      // Fill in the configuration structure of the profile initialization module
+      _DWCreateConfigurationModifyScannerSettings(clConfiguration)
+      // Run profile initialization
+      _DWModifyScannerSettings_Java(sCallback,sCallbackError)
+     type : 458752
+   -
+     name : _DWEnableDataWedge
+     procedure_id : 1952775342909614031
+     type_code : 15
+     code : |1+
+      private static void _DWEnableDataWedge(final String fsProfileName, final long flTimeoutMs, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWActiverDataWedge(fsProfileName, flTimeoutMs, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWDisableDataWedge
+     procedure_id : 1952775403039169597
+     type_code : 15
+     code : |1+
+      private static void _DWDisableDataWedge(final String fsProfileName, final long flTimeoutMs, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mDataWedgeWindevMobileFacade.DWDesactiverDataWedge(fsProfileName, flTimeoutMs, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _DWCreateConfigurationInitializeProfile
+     procedure_id : 1996072152320366979
+     type_code : 15
+     code : |1+
+      // Summary: Initialize the configuration structure of the profile initialization module
+      // Syntax:
+      //_DWCreateConfigurationInitializeProfile (<clSettings>)
+      //
+      // Parameters:
+      //	clSettings: Parameters
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWCreateConfigurationInitializeProfile(clSettings is CZebraDWProfileConfiguration)
+      profileAsJsonString is string = _DWSerializeCZebraDWProfileSetConfigSettings(clSettings)
+      _DWCreateConfigurationInitializeProfile_Java(profileAsJsonString)
+     type : 458752
+   -
+     name : _DWSerializeCZebraDWProfileSetConfigSettings
+     procedure_id : 1996091140370813074
+     type_code : 15
+     code : |1+
+      // Summary: Fill in the configuration structure of the profile initialization module
+      // Syntax:
+      //[ <Result> = ] _DWSerializeCZebraDWProfileSetConfigSettings (<clSettings>)
+      //
+      // Parameters:
+      //	clSettings: Parameters
+      // Return value:
+      // 	ANSI string: // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWSerializeCZebraDWProfileSetConfigSettings(clSettings is CZebraDWProfileConfiguration)
+      bufResult_ is Buffer
+      Serialize(clSettings, bufResult_, psdJSON)
+      profileAsJsonString is string ANSI = bufResult_
+      profileAsJsonString = Replace(profileAsJsonString,"_ON","ON",WholeWord+IgnoreCase)
+      result profileAsJsonString
+      
+     type : 458752
+   -
+     name : _DWSerializeCZebraDWProfileSwitchScannerParams
+     procedure_id : 1996109419742642281
+     type_code : 15
+     code : |1+
+      // Summary: Fill in the configuration structure of the profile initialization module
+      // Syntax:
+      //[ <Result> = ] _DWSerializeCZebraDWProfileSwitchScannerParams (<clSwitchParams> is CZebraDWScannerSettingsModification)
+      //
+      // Parameters:
+      //	clSwitchParams (CZebraDWScannerSettingsModification): Parameters
+      // Return value:
+      // 	ANSI string: Profile
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWSerializeCZebraDWProfileSwitchScannerParams(clSwitchParams is CZebraDWScannerSettingsModification)
+      bufResult_ is Buffer
+      Serialize(clSwitchParams, bufResult_, psdJSON)
+      profileAsJsonString is string ANSI = bufResult_
+      profileAsJsonString = Replace(profileAsJsonString,"_ON","ON",WholeWord+IgnoreCase)
+      result profileAsJsonString
+     type : 458752
+   -
+     name : _DWCreateConfigurationModifyScannerSettings
+     procedure_id : 1996418189236929661
+     type_code : 15
+     code : |1+
+      // Summary: Fill in the configuration structure of the profile initialization module
+      // Syntax:
+      //_DWCreateConfigurationModifyScannerSettings (<clSettings> est CZebraDWScannerSettingsModification)
+      //
+      // Parameters:
+      //	clSettings (CZebraDWScannerSettingsModification): Parameters
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWCreateConfigurationModifyScannerSettings(clSettings is CZebraDWScannerSettingsModification)
+      profileAsJsonString is string = _DWSerializeCZebraDWProfileSwitchScannerParams(clSettings)
+      _DWCreateConfigurationModifyScannerSettings_Java(profileAsJsonString)
+     type : 458752
+   -
+     name : ZebraDWEasyInitialize
+     internal_properties : CAAAAAgAAACCLe5IHyYDcYQ0C8EW6MPqrZJGkg5lWcbWKNhJIWb6b4DFaxI5cDQxfgZi9V6W1a7k3NTlzt6NQxDcBZ7MHAQlxzCKOjyyzzKm3vqcbo/wmyilA4v3uGXyjuNOwMUWiCVFnKN5zgPXkJLlExxNpZg5PjS6t0H6nTLV2rmN4irya0eJsTNwY2pXDWI09Cl1ALn7/B/eMVo=
+     procedure_id : 1996433792874181855
+     type_code : 15
+     code : |1+
+      // Summary: Initializes DataWedge for the current window
+      // This method must be used in the event End of initialization of the window
+      // Syntax:
+      //ZebraDWEasyInitialize(<sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWEasyInitializeAndStart("WIN_Scan.CB_Success","WIN_Scan.CB_Error")
+      //
+      //	sScanCallback (UNICODE string): Specifies the name of the procedure to run when a scan result from DataWedge is received. Prototype of the procedure: CB_ProcessScan(sData is string, sSymbology is string)
+      Procédure ZebraDWEasyInitialize(sCallbackSuccess is string, sCallbackError is string)
+      gsDWEasyCallbackSuccess = sCallbackSuccess
+      gsDWEasyCallbackError = sCallbackError
+      _DWLogMessage("ZebraDWEasyInitialize")
+      // Check if the profile exists
+      ZebraDWCheckIfProfileExists(AndroidGetApplicationPackageName(), gnDWEasyTimeOut, "_DWEasyCBProfileExist", sCallbackError)
+     type : 458752
+   -
+     name : _DWEasySuccessCreateProfile
+     procedure_id : 1996447588313134977
+     type_code : 15
+     code : |1+
+      // Summary: In case of success, this procedure initializes the profile with default settings
+      // Syntax:
+      //_DWEeasySuccessCreateProfile (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWEasySuccessCreateProfile(sProfileName is string)
+      _DWLogMessage("_DWEasySuccessCreateProfile:" + sProfileName)
+      _DWEasyInitializeProfile()
+     type : 458752
+   -
+     name : mDataWedgeWindevMobileFacade.DWObenirLeNomDuPackage
+     procedure_id : 1996448945522854322
+     type_code : 15
+     code : |1-
+      // Summary: <specify the action of the procedure>
+      // Syntax:
+      // [ <Result> = ] mDataWedgeWindevMobileFacade.DWGetPackageName ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	UNICODE string: <specify the possible values as well as their interpretation>
+      //
+      // Example:
+      // Indicate an example.
+      //
+      PROCEDURE mDataWedgeWindevMobileFacade.DWGetPackageName()
+      private static String mDataWedgeWindevMobileFacade.DWGetPackageName()
+      {
+      	Context context = getApplicationContext();
+      	String sPackageName = hcontext.getPackageName();
+      	return sPackageName;
+      }
+      // Summary: <specify the action of the procedure>
+      // Syntax:
+      // _DWGetPackageName ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      //PROCEDURE mDataWedgeWindevMobileFacade.DWGetPackageName()
+      //
+      //
+     language : Java
+     type : 458752
+   -
+     name : ZebraDWEasyCleanAndStop
+     internal_properties : CAAAAAgAAADG53rFFLEryn4OQ6W8bIOMH/KsdM7YhRdWDPeHj+wSnCLOBtb69FALKkPehygXfQ9NiorguoDTWsQAvGBA0nzAg75TeVaYsmK9Amqf++CZX74s0pGu0JfQPxKqY/yQlM35fP51mV8j+BnCjcHKvSanomzXj4YuAYK4r0va3frCv4DmcR5sqONiSdjvKIUyaOwPsb4idqs+QmHiXIAz057Yp2JLPA==
+     procedure_id : 1996452308482440157
+     type_code : 15
+     code : |1+
+      // Summary: Completely terminate the use of DataWedge by stopping the reception of scans
+      // and by deleting the profile created by the method ZebraDWEasyInitializeAndStart
+      // Syntax:
+      //ZebraDWEasyCleanAndStop(<sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWEasyCleanAndStop("WIN_Scan.CB_Success","WIN_Scan.CB_Error")
+      //
+      Procédure ZebraDWEasyCleanAndStop(sCallbackSuccess is string, sCallbackError is string)
+      // Save procedure names for reuse in the callbacks _DWEasyCleanBroadcastReceiverSuccess
+      gsDWEasyCallbackError = sCallbackError
+      gsDWEasyCallbackSuccess = sCallbackSuccess
+      // Delete the Scan callback and the broadcast receiver associated with the window
+      ZebraDWCleanBroadcastReceiver("_DWEasyCleanBroadcastReceiverSuccess", sCallbackError)
+     type : 458752
+   -
+     name : _DWEasyCBProfileExist
+     internal_properties : CAAAAAgAAABKXJr3lgFN6X++thTbIlm9ODbHVEqlke21+pBjA8PSjgQnmUiCKbmDW1eM6AWqKLJZxNQ9GzD1swb8bzpNIIi652nFwVQBCM3pAioioF/T6StdVMR3Nr4OfU63AHtCawHe4KgO3v923neupqKnWdmVfxgVrh0aJHrcRXqvkEZzM15d5giiNaPN2AmpME3T+n1q0wLbaw==
+     procedure_id : 1996463260657362500
+     type_code : 15
+     code : |1-
+      // Summary: Callback
+      // Syntax:
+      //_DWEasyCBProfileExist (<sProfileName> is string, <bProfileExist> is boolean)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      //	bProfileExist (boolean): <specify the role of bProfileExist>
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWEasyCBProfileExist(sProfileName is string, bProfileExist is boolean)
+      
+      if bProfileExist = True then
+      	_DWLogMessage("_DWEasyProfileExist: The profile" + sProfileName + " exists")
+      	_DWEasyDeleteExistingProfile()
+      else
+      	_DWLogMessage("_DWEasyProfileExist: Profile" + sProfileName + " not found")
+      	ZebraDWCreateAProfile(AndroidGetApplicationPackageName(),gnDWEasyTimeOut,"_DWEasySuccessCreateProfile", gsDWEasyCallbackError)
+      end
+     type : 458752
+   -
+     name : _DWEasyInitializeProfile
+     procedure_id : 1996463793233365589
+     type_code : 15
+     code : |1+
+      // Summary: Initializes the profile
+      // Syntax:
+      // _DWEasyInitializeProfile ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWEasyInitializeProfile()
+      _DWLogMessage("_DWEasyInitializeProfile")
+      clSettings is CZebraDWProfileConfiguration
+      clSettings.m_sProfileName = AndroidGetApplicationPackageName()
+      clSettings.m_nTimeOutMS = gnDWEasyTimeOut
+      ZebraDWInitializeAProfile(clSettings, gsDWEasyCallbackSuccess, gsDWEasyCallbackError)
+     type : 458752
+   -
+     name : _DWEasyDeleteExistingProfile
+     procedure_id : 1996465884890527371
+     type_code : 15
+     code : |1+
+      // Summary: Deletes the existing profile
+      // Syntax:
+      // _DWEasyDeleteExistingProfile ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWEasyDeleteExistingProfile()
+      _DWLogMessage("_DWEasyDeleteExistingProfile")
+      ZebraDWDeleteAProfile(AndroidGetApplicationPackageName(),gnDWEasyTimeOut,"_DWEasyCBProfileSuccessfullyDeleted", gsDWEasyCallbackError)
+     type : 458752
+   -
+     name : _DWEasyCBProfileSuccessfullyDeleted
+     internal_properties : CAAAAAgAAABKXJr3lgFN6X++thTbIlm9ODbHVEqlke21+pBjA8PSjgQnmUiCKbmDW1eM6AWqKLJZxNQ9GzD1swb8bzpNIIi652nFwVQBCM3pAioioF/T6StdVMR3Nr4OfU63AHtCawHe4KgO3v923neupqKnWdmVfxgVrh0aJHrcRXqvkEZzM15d5giiNaPN2AmpME3T+n1q0wLbaw==
+     procedure_id : 1996466464711116821
+     type_code : 15
+     code : |1+
+      // Summary: Callback
+      // Syntax:
+      //_DWEeasyCBProfileSuccesfullyDeleted (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWEasyCBProfileSuccessfullyDeleted(sProfileName is string)
+      _DWLogMessage("_DWEasyProfileSuccessfullyDeleted: " + sProfileName)
+      _DWCreateAProfile(AndroidGetApplicationPackageName(),gnDWEasyTimeOut,"_DWEasySuccessCreateProfile", gsDWEasyCallbackError)
+     type : 458752
+   -
+     name : ZebraDWEnableDataWedge
+     internal_properties : CAAAAAgAAACm6B0lLfzRa7kuHmp9cuVh3gKhZOwzvW9DzkARHdsqptr7kzg4L01pgXNwZo+G5HYD/Fr5FSaBDcyIY1wTgIi6+YmHSb5jIIf/3oMPe85ihGSU4/VmJa9/4oOcBWahihTj91+DsQqLgyhv0x8K+EAIwNOgX3z5FXvdJruMi5WiDru4mQHJLCxarb6mtdAafXkLUIZH/w==
+     procedure_id : 1998707080387799079
+     type_code : 15
+     code : |1+
+      // Summary: Enables DataWedge if it has been previously disabled using the procedure ZebraDWDisableDataWedge
+      // Once enabled, the scans will be returned to the application if a scan callback has been defined beforehand 
+      // via the method ZebraDWSaveScanCallback
+      // Syntax:
+      //ZebraDWEnableDataWedge (<sProfileName> is string, <nTimeoutMs> is integer, <sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	ProfileName (UNICODE string): Indicates the name of the profile for which you want to enable the scanner
+      //	nTimeoutMs (integer): Indicates a timeout in milliseconds in case the intent does not respond
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Example:
+      // ZebraDWEnableDataWedge("myDataWedgeProfile", 5000,   "WIN_Scan.CB_EnableDataWedgeSuccess", "WIN_Advanced_Scan.CB_EnableDataWedgeError")
+      //
+      Procédure ZebraDWEnableDataWedge(sProfileName is string, nTimeoutMs is int,sCallbackSuccess is string, sCallbackError is string)
+      _DWEnableDataWedge(sProfileName,nTimeoutMs,sCallbackSuccess, sCallbackError)
+     type : 458752
+   -
+     name : ZebraDWCreateAProfile
+     procedure_id : 2001297353694517484
+     type_code : 15
+     code : |1+
+      // Summary: Creates a DataWedge profile initialized with the default values.
+      // Syntax:
+      //ZebraDWCreateAProfile (<sProfileName> is string, <nTimeoutMs> is integer, <sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      //	nTimeoutMs (integer): Maximum wait time in ms if DataWedge does not respond before TimeOut
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWCreateAProfile("myDataWedgeProfile", 5000, "WIN_Scan.CB_ProfileCreated", "WIN_Scan.CB_Error")
+      //
+      Procédure ZebraDWCreateAProfile(sProfileName is string, nTimeoutMs is int, sCallbackSuccess is string, sCallbackError is string)
+      _DWCreateAProfile(sProfileName,nTimeoutMs,sCallbackSuccess,sCallbackError)
+     type : 458752
+   -
+     name : ZebraDWStartScan
+     internal_properties : CAAAAAgAAABIWoxd/Zdxm/kOPsp9MkWBXgKBBGwTPc8DriBxHZsKRtr789i4Tw3JAZPQxg9GRBYD/PrZVUZB7YzoQ7wTACiaOcmnKX5DoGd/vtMfq54SlHQkUwV29f/P8rNsVZZxeuQzRw+TQVpb03jfY+/6SDDY0GMQ7wwJpYstlsucuyUS3ouIyVEZvDxqvS62BUDa/URQOfjVbQ==
+     procedure_id : 2001297783191346506
+     type_code : 15
+     code : |1+
+      // Summary: Starts the scanner via software. The scanner switches to scan standby. 
+      // If the beam is not disabled, it will light up automatically.
+      // Syntax:
+      //ZebraDWStartScan (<sProfileName> is string, <nTimeoutMs> is integer, <sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      //	nTimeoutMs (integer): Maximum wait time in ms if DataWedge does not respond before TimeOut
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWStartScan("myDataWedgeProfile", 5000, "WIN_Scan.CB_StartScan", "WIN_Scan.CB_Error")
+      //
+      Procédure ZebraDWStartScan(sProfileName is string, nTimeoutMs is int, sCallbackSuccess is string, sCallbackError is string)
+      //_DWStartScan(sProfileName,nTimeoutMs,sCallbackSuccess,sCallbackError)
+      _DWStartScan(sProfileName, nTimeoutMs, sCallbackSuccess, sCallbackError);
+     type : 458752
+   -
+     name : ZebraDWDisableDataWedge
+     internal_properties : CAAAAAgAAAAAIuQORhd5W4mOptplSn2RjkLJVBTrXSerBoApneuK3iIDo8BovyX5YWP4ljdezAbDnAL5HT6BBTRAM0SzEEjSscHH4Q4j2Md/PmcLV6pW2NgIt2nCoRPzbu9wQbIdDph3e/NX7dZf13Srl7vm5FQc5IcU0wgVme8J4k+Yt2GWUn98zVUFiIAueQpKMaxWwYhdIdCNpQ==
+     procedure_id : 2001297942105173739
+     type_code : 15
+     code : |1+
+      // Summary: Disables DataWedge. Makes the scanner ignore any scan request. 
+      // Once disabled, it will no longer be possible to scan using the physical button or the method ZebraDWStartScan.
+      // Syntax:
+      //ZebraDWDisableDataWedge (<sProfileName> is string, <nTimeoutMs> is integer, <sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      //	nTimeoutMs (integer): Maximum wait time in ms if DataWedge does not respond before TimeOut
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWDisableDataWedge("myDataWedgeProfile", 5000, "WIN_Scan.CB_DisableDataWedge", "WIN_Scan.CB_Error")
+      //
+      Procédure ZebraDWDisableDataWedge(sProfileName is string, nTimeoutMs is int, sCallbackSuccess is string, sCallbackError is string)
+      _DWDisableDataWedge(sProfileName,nTimeoutMs,sCallbackSuccess,sCallbackError)
+      
+     type : 458752
+   -
+     name : ZebraDWDeleteAProfile
+     procedure_id : 2001298066659319563
+     type_code : 15
+     code : |1+
+      // Summary: Deletes the profile specified
+      // Syntax:
+      //ZebraDWDeleteAProfile (<sProfileName> is string, <nTimeoutMs> is integer, <sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      //	nTimeoutMs (integer): Maximum wait time in ms if DataWedge does not respond before TimeOut
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWDeleteAProfile("myDataWedgeProfile", 5000, "WIN_Scan.CB_ProfileDelete", "WIN_Scan.CB_Error")
+      //
+      Procédure ZebraDWDeleteAProfile(sProfileName is string, nTimeoutMs is int, sCallbackSuccess is string, sCallbackError is string)
+      _DWDeleteAProfile(sProfileName,nTimeoutMs,sCallbackSuccess,sCallbackError)
+      
+      
+     type : 458752
+   -
+     name : ZebraDWSaveScanCallback
+     internal_properties : CAAAAAgAAABSdKJYb3GVGf8+LjSD6jHN6Ob/BCL9YZUdkjBbM0Mithw/OVDC+VHjq9fUyJ1SoALJpAwdExgFG24EP4I9UEjSfwGFiRRRsF2JMp7eDBvnfa9hWAhjAnJSSUqbnNc+LyWCFAxC6isaAuNqmt7DZR1Jk6yJYnnGWD6YMV4LLNLnx/Jx6gx+MTdh5MWNDGmPDmGHywrDcw==
+     procedure_id : 2001298242753020167
+     type_code : 15
+     code : |1+
+      // Summary: Saves a WL procedure to receive the scan results
+      // To delete it, use the procedure: ZebraDWDeleteScanCallback
+      // Syntax:
+      //ZebraDWSaveScanCallback (<sScanCallback> is string, <sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sScanCallback (UNICODE string): Indicates the name of the WL procedure to run when the scanned data is received. Prototype of the procedure: CB_ProcessScan(sData is string, sSymbology is string)
+      //	sCallbackSuccess (UNICODE string): Indicates the name of a WL procedure to run in case of success. Prototype of the procedure: CB_Success(sScanCallback is string)
+      //	sCallbackError (UNICODE string): Indicates the name of a WL procedure to run in case of error. Prototype of the procedure: CB_Error(sScanCallback is string, sMessage is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWSaveScanCallback("WIN_Scan.ProcessScan", "WIN_Scan.CB_SaveCallbackSuccess", "WIN_Scan.CB_SaveCallbackError").
+      //
+      Procédure ZebraDWSaveScanCallback(sScanCallback is string, sCallbackSuccess is string, sCallbackError is string)
+      _DWSaveScanCallback(sScanCallback, sCallbackSuccess, sCallbackError)
+      
+     type : 458752
+   -
+     name : ZebraDWStopScan
+     internal_properties : CAAAAAgAAADw0hTegndxu7muHmp98uVh3gIhZGyzPW/DzsCRnduqJlp7k7g4L03pgfNwZo8G5HYD/Nr5laYBDUyI49yTgAg6eQmHyb5jIAf/XkPPOw6ixCRUIzUmZW+/IsNcxSbhylSjt5/DcUpLw2ivk9/KOIBIgJPgnzw51bsdZntMS9XiTnt42UGJbOya7f5mdZCKTfQNUYBd1Q==
+     procedure_id : 2001298461796403263
+     type_code : 15
+     code : |1+
+      // Summary: Stops the scanner if it is in scan standby (a scan is in progress). 
+      // If the beam is already enabled, il will automatically turn off.
+      // Syntax:
+      //ZebraDWStopScan (<sProfileName> is string, <nTimeoutMs> is integer, <sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      //	nTimeoutMs (integer): Maximum wait time in ms if DataWedge does not respond before TimeOut
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWStopScan("myDataWedgeProfile", 5000, "WIN_Scan.CB_StpoScan", "WIN_Scan.CB_Error")
+      //
+      Procédure ZebraDWStopScan(sProfileName is string, nTimeoutMs is int, sCallbackSuccess is string, sCallbackError is string)
+      _DWStopScan(sProfileName,nTimeoutMs,sCallbackSuccess,sCallbackError)
+      
+     type : 458752
+   -
+     name : ZebraDWDeleteScanCallback
+     internal_properties : CAAAAAgAAAD8IecdFuTDTaF8ViAlWJ2LU//KwmF5FF/Lf2YTAUfV0AekWfPWJVWJcGGm7mii57sZxgllUyw+mzz/JTJ7RI3EUcrqx9JcTqSLUE9H9de1XuFQPCv9RloJlqJOiVVCd/WO7643IpfqpZB8nZMDQ8sVu3Mzh6eM/iXV0fFyAEK7iVU53R5JSCQR2uCbQhaos243nvZiA+HTVY6MGoACtWVW67O/
+     procedure_id : 2001298599235454053
+     type_code : 15
+     code : |1+
+      // Summary: Deletes the scan callback defined via ZebraDWSaveScanCallback
+      // The scanner will still work, but the application will no longer process the scanned data since it will not receive the scan results.
+      // Syntax:
+      //ZebraDWDeleteScanCallback (sCallbackSuccess> is string, sCallbackError is string)
+      //
+      // Parameters:
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWDeleteScanCallback("WIN_Scan.CB_SaveCallbackSuccess", "WIN_Scan.CB_SaveCallbackError")
+      //
+      Procédure ZebraDWDeleteScanCallback(sCallbackSuccess is string, sCallbackError is string)
+      _DWDeleteScanCallback(False, sCallbackSuccess,sCallbackError)
+     type : 458752
+   -
+     name : ZebraDWCheckIfProfileExists
+     internal_properties : CAAAAAgAAABO/2GRJ5LsQR7Cf5ifmXu+uHHGhQon2byVS5oE8IGQV5YTMfGHe4HU2db7+ciA5hl8O1VQupS1xBNzQKpDAk1QNSMnkBQ6I0YjLBKd3zLb8Dek/0K5PMuQkvxJSneqS4ovPBYdfjMCuQYCanGV
+     procedure_id : 2001298706609727176
+     type_code : 15
+     code : |1+
+      // Summary: Checks if a profile already exists.
+      // Syntax:
+      //ZebraDWCheckIfProfileExists (<sProfileName> is string, <nTimeoutMs> is integer, <sCallbackProfileExists> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      //	nTimeoutMs (integer): Maximum wait time in ms if DataWedge does not respond before TimeOut
+      //	sCallbackProfileExists (UNICODE string): Indicates the name of a WL procedure to run in case of success. Prototype of the procedure: CB_ProfileExist(sProfileName is string, bProfileExist is boolean). bProfileExist is set to True if the profile exists already, and to False if it does not exist.
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string, sError is a string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWCheckIfProfileExists("myDataWedgeProfile", 5000,  "WIN_Scan.CB_ProfileExist", "WIN_Scan.CB_Error")
+      //
+      Procédure ZebraDWCheckIfProfileExists(sProfileName is string, nTimeoutMs is int, sCallbackProfileExists is string, sCallbackError is string)
+      _DWCheckIfProfileExists(sProfileName,nTimeoutMs,sCallbackProfileExists,sCallbackError)
+      
+     type : 458752
+   -
+     name : ZebraDWEasyStart
+     internal_properties : CAAAAAgAAAAbYRlSk7nYTm3Xq19tFBSgHxQPbNMQgD+8VixzB1RItAMgyDzdLr/OxS8GQij0pYJYslpu+ZHht3B6qe+hvz1EQa4oNswwH3Ao9fiu39hdixtoyXo0eZEpXPcX2KRjVFBrzPFIA+Dxmqm7u1/fF//DqTVpN+dOxLvvncV6AGK7E+u0XOZZexIoxWqKA+4GzWFNntHRrhOUauyqL0BSab47AwVVtvToRpm1Yi5lXjK6mUfkCA==
+     procedure_id : 2035443602183512698
+     type_code : 15
+     code : |1+
+      // Summary: Starts scan reception
+      // The call to this method allows receiving scan results
+      // in the procedure defined in the 1st argument of the method ZebraDWEasyeInitializeandStart
+      // This method must be called as soon as you want to receive the scanned data
+      // in general, it is used in the event for bringing the window to the foreground and in the focus gain event 
+      // To ignore these events, use the procedure DWEasyStopper
+      // 
+      // Syntax:
+      //ZebraDWEasyStart (<sScanCallback> is string)
+      //
+      // Parameters:
+      //	sScanCallback (UNICODE string): Procedure that will be run at each scan. The prototype of the procedure is: PROCEDURE CB_ProcessScan(sData is string, sSymbology is string)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWEasyStart ("WIN_Scan.CB_ProcessScan")
+      //
+      Procédure ZebraDWEasyStart(sScanCallback is string)
+      gsDWEasyScanCallback = sScanCallback;
+      ZebraDWSaveScanCallback(gsDWEasyScanCallback, "","")
+     type : 458752
+   -
+     name : ZebraDWEasyStop
+     internal_properties : CAAAAAgAAACDeRE6j+EjRO8bxcuf9va4wTQoCE+kLItwCmCHi4hc2E/V7m7v7i2adZ2e+LzYobzwPGz8v6Wbb+ScUd2h/23a7WRmCB7Atewo6/C0m5Sh9eu6e9BupSNh2IZEvYFYef1GN3odyN30f6KOrMB4eDx84OyWGBAXSzDgjNJ/1R9kuF437Qu20G21ZiUzfKdvWnIc4k11in/47oCeM6T+5Sp3LB58nROL4xSQh+FMQu6S8T/ccA==
+     procedure_id : 2035443718147722382
+     type_code : 15
+     code : |1+
+      // Summary: Ignores scan events
+      // This method must be used in the event window to background, or in the event loss of focus
+      // Thus, a hidden or closed window will no longer receive any scan events
+      // Do not use this method when closing windows, but rather ZebraDWEasyCleanAndStop
+      // Syntax:
+      //ZebraDWEasyStop ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWEasyStop()
+      //
+      //	bClose (boolean): set to true if the method is run when closing a window
+      Procédure ZebraDWEasyStop()
+      // There is no need to delete the Broadcast receiver
+      ZebraDWDeleteScanCallback("","")
+     type : 458752
+   -
+     name : AndroidGetApplicationPackageName
+     internal_properties : CAAAAAgAAACOoGYLtz2niW+cFKQDVBv/fOCL+vpZGw1BRN47a2WA1HBhXYZ2tbNfF2n7jLFOnNZlDHx5/xgxQwJsG3bZPPwmSwmFpZDJzP2VCqisPq0No3Unnr69tLB8p/g9WpGYlbNgYhqAZL0oJMEoHV1A2p760vW6TbJDW8HfuKViWa+A6IV6w19fduKAj2AA+3acexaWh04PJw==
+     procedure_id : 2035794251936702907
+     type_code : 15
+     code : |1+
+      // Summary: Returns the application package name (ex: com.zebra.datawedgesample)
+      // Syntax:
+      //[ <Result> = ] AndroidGetApplicationPackageName ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	Undefined type: Returns the name of the application package as a string
+      //
+      // Example:
+      // sPackageName is string = AndroidGetApplicationPackageName()
+      //
+      Procédure AndroidGetApplicationPackageName()
+      result _DWGetPackageName()
+     type : 458752
+   -
+     name : _DWEasySuccessInitializeProfile
+     procedure_id : 2035825381898173034
+     type_code : 15
+     code : |1+
+      
+      Procédure private _DWEasySuccessInitializeProfile(sProfileName is string)
+      _DWLogMessage("_DWEasySuccessInitializeProfile")
+      //ZebraDWEasyStart()
+      ExecuteMainThread(gsDWEasyCallbackSuccess, sProfileName)
+     type : 458752
+   -
+     name : ZebraDWCleanBroadcastReceiver
+     internal_properties : CAAAAAgAAABCm7FLaK511xvyoLZH8kd1qeEHNDPp8vMfeZ7JsV+NRtsq971cOR+BfGuq3EBa77EN1AeHodgQNwmjScLr1Dl0iXa6+/qE6gDzRGv/ZV+RPimKKvFLLIyLWIxcx0twQUM8WcRlcEVcV4pGzqRkHIBCFt6kDCwBaY5GRHrrubvQHghczkuePdcSnzscO8+ZQH81dKzcBeflZ5SKEJKkA5cIPQ0B
+     procedure_id : 2036096767930652660
+     type_code : 15
+     code : |1-
+      // Summary: Deletes the broadcast receiver associated with the window.
+      // The broadcast receiver is an Android object that allows receiving scan results.
+      // It is used in the underlying libraries. 
+      // It is necessary to call this method when you are in the window closing process to avoid memory leaks.
+      // Syntax:
+      //ZebraDWCleanBroadcastReceiver (sCallbackSuccess> is string, sCallbackError is string)
+      //
+      // Parameters:
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWCleanBroadcastReceiver("WIN_Scan.CB_SaveCallbackSuccess", "WIN_Scan.CB_SaveCallbackError").
+      //
+      Procédure ZebraDWCleanBroadcastReceiver(sCallbackSuccess is string, sCallbackError is string)
+      _DWDeleteScanCallback(True, sCallbackSuccess, sCallbackError)
+     type : 458752
+   -
+     name : _DWEasyCleanBroadcastReceiverSuccess
+     internal_properties : CAAAAAgAAACQ45xTf4XdtwKZ9WZyRRlCnTXrBffA69hpseWC3yK/8/kYZo/QJ1FBpfjkFJUhCePAcyNkgNvPA49Hm4m2HEEPjQvh8b0uagwukEnqlIsgEkzYCWVVBtmYe3G0vRyzZWRREGdYwlkhPwwtEr1BEG8a4sZSxDFXZr3wfeIfenkRfOm9V/pkJAM+ZvtrrOvVUFqMxnvVj+pBRRFchlXZH7gjBWGwu7RsseaHogu86rVxlwRHhxVD/s65zb9pjet/yX4ErYx2zbdmfWkCwwnSlLX14/y+GF/CUGHgo0tW
+     procedure_id : 2036115751688817138
+     type_code : 15
+     code : |1+
+      // Summary: Procedure run from ZebraDWEasyCleanAndStop when the method ZebraDWCleanBroadcastReceiver is run successfully
+      // Syntax:
+      //_DWEasyCleanBroadcastReceiverSuccess (<sProcedureName> is string)
+      //
+      // Parameters:
+      //	sProcedureName (UNICODE string): 
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _DWEasyCleanBroadcastReceiverSuccess(sProcedureName is string)
+      // Delete profile
+      ZebraDWDeleteAProfile(AndroidGetApplicationPackageName(), gnDWEasyTimeOut, gsDWEasyCallbackSuccess, gsDWEasyCallbackError)
+      
+      
+     type : 458752
+   -
+     name : ZebraDWEasyClean
+     procedure_id : 2036166548325384740
+     type_code : 15
+     code : |1+
+      // Summary: This procedure will stop and clean DWEasy by removing the reference
+      // to the callback procedure for scanning processing and by cleaning the Android broadcast receiver 
+      // Syntax:
+      //ZebraDWEasyClean (sCallbackSuccess> is string, sCallbackError is string)
+      //
+      // Parameters:
+      //	sCallbackSucess (UNICODE string): Indicates the name of a WL procedure to be run in case of success. Prototype of the procedure: CB_Success(sProfileName is string)
+      //	sCallbackError (UNICODE string): Specifies the name of a WL procedure to be run in case of an error. Prototype of the procedure: CB_Error(sProfileName is string, sMessage is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWEasyClean("WIN_Scan.CB_CleanCallbackSuccess", "WIN_Scan.CB_CleanCallbackError").
+      //
+      Procédure ZebraDWEasyClean(sCallbackSuccess is string, sCallbackError is string)
+      ZebraDWCleanBroadcastReceiver(sCallbackSuccess,sCallbackError)
+     type : 458752
+   -
+     name : _DWGetPackageName
+     procedure_id : 2047575828162333881
+     type_code : 15
+     code : |1-
+      public static String _DWGetPackageName()
+      {
+      	Context context = getApplicationContext();
+      	String sPackageName = context.getPackageName();
+      	return sPackageName;
+      }
+     language : Java
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x1b183ffd00072dc5
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

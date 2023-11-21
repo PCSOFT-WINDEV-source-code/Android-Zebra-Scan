@@ -1,0 +1,341 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WIN_Simple_Scan
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : WIN_Simple_Scan
+ identifier : 0x2d1b6e4307f562fc
+ internal_properties : CAAAAAgAAACu8DDNKoq6H7cImEjWQpxRaYt6BDt7OPLve7XFGEbFHNqNXOACr3CUy865M9zP5Xg1uBMK0h2S1XNpHn7+KEUQhKBayKoW9EsiQw67Q11Si/5SEgnwjRzxgwdSVaX8OYOPS64uqSswct55GLFs7cwybLhn+zequUrnS9gyKNvy1a96Z+H8BqaqsRT5MzfMbyYtZMQ/0nU1vq9zJLpeRfvwoXytT7az8cN/K5FtoQ2EwKlrQQ7OM7ZjRQcarIqvL/4u2GhcIPwxqbL22GRh5nSVTWn7ya4+h7X8DSkEkG2CzvDBWl3EJyrd0uA6d8Bx80CEtv4t3KHnijhO7Ov54awmf7dZLRGyFsieCmmgWjBLs1T11KS98Vxh7fh908NkMVcskHDAPquiVa8XGfjht7siwSL2P6fs3uGxihsX2YShVeM3mGu3MOWZPPfLLQRZiCcmWOpji+Jd3r3nsjhWj4Zq1d6VsowK9u02uqsTvWwq75+W8y35lDJ9SzDHLVdyHyhyhS3EboljDVO0ceUSEYwVmYpfQKwzTIXwjpFZ9/V+l/JvK9rphk4b9CAoJBYTHGEhg24FVVJT1m/mOAaiH+Ri+gtenIZHMURUBhZZKx698w+yhAENohWRokdA5Xka9Z6w0VpreWDnU45uoU/ih9hhMoWuSZJut2+vANRqzzJUO9D3JVGhmyXl0u9SavlwOBgxKBKHJ5s0v1ufvev5m67h7dRmxY7g1lgP13Zpa/ozQQA1740ZTxra+1/FIoBQbqQqxkpzqUI0LU4wC8AlFQa7wJQs3bCQRUMdKSWXpgZCrhg9TOjwFyszMLwsH4BEarxM53KEhYx4aDkpzwnsvnNc5u4+RR1dp9zgB7y7e40p+EqZ+rn2W7Hamqmd6Ssno1FFLO5ocb3jRKy67dE1
+ properties :
+  width : 320
+  height : 407
+  heightMin : 480
+ controls :
+  -
+    name : EDT_Status
+    identifier : 0x2d1b6e4307f662fc
+    internal_properties : CAAAAAgAAADiZUoxHA2LHimCXDSje+nJzAQtJjFAUzsjs4M96Z+saiV0HAAXecGhwbvmTEN9+5v4sw0n80jSFNqPnd7rED3ic2ifpfwAhm9iyuHB6AdflXUMFFjxTtGUjg+2ZlYz3QpIxYXlUS1y5znMpFlZXYzhY76k4GS8bNS5OWov4BZQ3T8dH/WPQvazlx3kfoKCJMdtk8xqpEhXiYGsVssi0p/fqijxdmj0L2DP2ZUcVBcpXAiwdFAF1KFxnDN2QfOaYn5eFXy8dLDZbA8ZnM7FYVx3F7jzO70OOUjBJWdAR/7EmNFvN2nSDXDV4kuPWjyWNFHLDdE0/CSHgyeZr6WLQzI7I61D69zk5RBEpaPsIus8B8bwinqXaavQ2n7us2vsQ4JJuwvXa+WG91kU/1TwsikUpfdBGDdcp40IDZS+T65NjUZJB1CHPICdaQEWF70tQyMZsjF1DRnquWX5/Ofu3Efd4BT4Ve6AMxdk+vw0bEXZEAssZJAH1dt5RVVvDgclfMq72mBB/cnY6N8BeZeIlJbuebQcaiOfMznjT6D1NZzirEASirCKHelPijpiX7ovhxEw5TD2G9ZfElpIaEhfhtlBy++0H2VX6jlUuaeiI15wv8TAqWjiTYlaypcxE0ZD3o2dsASssmPr0eCOcnkt26h7YHVaWxUHImNFo7wEjKqnitAtKWyqmGEyERuFfnLx0kQB/4gbQeBNPhKd073j/ULi49bbZbtEhxSa77QRh9IPezHSHScbSqHGdAwhnTvT5Fhx8LXa66MuWlfJjwsA+5jAqtaC138inRMJgdXfyKDm3m+x4dcif03JAPg04joponZN4FRKnQTzyONGhIC3n7DrkKZ/9meN/wDZ4v/DpI+2WKu5tDBOXlrfgXqNKxMjxQK5ZF0mZP3pdUfFporIAnkGOcl5SrWGAINIKcwdNE/4JmCVCWZoyUYIsLmwTDk9KuGn0FpQ/zs1D1oRVWIapakmp2dOyz1M4qHVP4teOixxDwHcsTV64vAw0LegnzF81DDVtPp+CtArrqPYneyb33EA8FE3eAb5VT0Q5loom8Mrcp8jXClO1PB2BVmC0XEF3Q99JDP20uOfGQy+DKGBSObxiyUbDAoAbSbVPJAFYdDdI+w+uXu0RLclnghOF+fzPIvqwXpukkXTYg==
+    properties :
+     x : 10
+     y : 10
+     width : 300
+     height : 319
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : BTN_AdvancedMode
+    identifier : 0x2d1b6e4307f762fc
+    internal_properties : CAAAAAgAAADABootFMehaLRvwKzjmzL+TgGI8IodmHmVxfHBneZlMuGnFQtrxHbBTweV5SjkZLCESzlHNd6f1MUxsj5w638iRnusV/mY8x78i1w0aXtm282U5RQW1PVg8PmnLqFmHpio5TFCkPevBu/+7EWKpjHTBO2g5CgFp77dkKltJSX1vENIy3SlHlwotZRr8eD1hP5WIlrKtv3/7asw4vwd36v42rwdbVT2D+ngAiRQ1LkB7bYeqozVgpyT4qFQnsQGL21/4Zq+e/ptRIs2hD1wpeq3huRFcJ6W29ytBsj12qEDfAACH4bBojlc3xHrPk4wQFfdyMZG/yzTFToQsPH9kuO5K8YjG6ActSCpNbVpl02EcPDYcC06RAWk6ukepTEhWj0d4O7pL80k58deF/SN1EDkMpF1KoEVY0EBZgFbMHbt/DdYl8w1wVHgrN+dOsbW1f8lXVO99wfYrq+9P7x6G31FbcHDtz/wp+W5+z/YyyqPz2RXmdC8XBZc4IwTZHbLWeR+79/S7MbVopGzpkUroYvGAlVU0VepF5Lm+5O/UA1RVnmGbpAj6HdWIdh/tXAE2oAfPvEEno/c+F5PMqjLNXXfMLTTs/hc0KyL3UsuvZZl47j6f6n00yGGG1sAg2dJVW5oiMOu0/6bT55GfVqOSsTA0Sm5V+Ay2SEhE5+v9vxTd6Vqhbr9YZZOnW+8W/ozh3KY2hQUlaHbQJMXEbY5RlI7RZCXmCmjHBvg5o7fFl9AhyU/0MrSMppOEdAcuwmhXYaVeWBPNrMI/T0Znh7kGA3uOikQmTsqdaUHwfHoBctrSTVYZy1c8V6OeW8yA4oZqF+oEtFLjK1nmmeoZXr2psRoDVoqZxp9Co/gGw2LM6JKd9b2qzZJe+YcrgA4egH5vJfoDykPh60shoZ4E91JVdnB7lOlvJVeLD6Akd0KFLw8HjYl1eUtvSF5N0xSlAKGZrgS0tcsV/pVz8pRRaUG7ZCoUu7Tm4HxC1onBz2UG0hR78CX6zHkesvVrzWr1U7ShxIqUjGDG+i4fIQvd8NmnXqyGtRIBMik7ZOIO1H86FdV6zTJ0PJ44TYO5BrReCGxvgsjL1HwWydb3PRgbILMSeuQYf6D90D8aohm
+    properties :
+     x : 163
+     y : 345
+     width : 147
+     height : 48
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         OpenMobileWindow(WIN_Advanced_Scan)
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Start_bar_code_scan
+    identifier : 0x2d1b6e4307f862fc
+    internal_properties : CAAAAAgAAADxgT8dg/R+Lh7IE9+XHfrWFnX/zN/R2dU2R43CnZxKVuMBWKOHQNf+Doq4l7n47veOloTiGSxJiPRDsePWcLVu2QYRrXxcGkRHLuWB9gBexyoKBTRBcwR0FHNTJNH0SCiaRmOrfxTnqOY/Uj6QJzaCVTZE1/OL/8TS/8OQWzUF2Vti9LEEmqGo4ek6FczB+NuLERH1xGwDai+Glirnlmd60HmmOqAFGGk8Ui1jXSHzcVwraf10qBQUkFSDUOEPz9der8xAZkYy5BL1YSXqVKI8aeQSQgiNMJa5sfJufbAMXmWyYhjIbuq5H0wLhfn+zKc0/8MAuDu+nxnK7t5I/Ayy76vlhya6yjVveQyQG2j9yVK5yFo7AIppTFcq+USYworGFhGb4tNKXSj+IWcLt9jDm52/926P0VWgliOIm3VUqIi9H/+89yea0wUMeHce2VPtBDMsmtweTcnbwFvOz53dzI2tGbECXG6xRC8BBoGd7N0r9S2i3cW9AnXu77MCn6boXjTJNUMSkKk79EPTlBlKqBgW37QCLT/GWTBNcWHs3zjos0YJtiF2ne1+lXp9IXjEYl9xlduIXWqjTPfKVEZdcfk6hMXdAmVAUrt9DpgnBwH3AQIeRJllNR73reDAzRAq5QiX8EpsVf3DFqH5FblQ9XRDdsRSwbVMZROhl5c6bJa8J9krXIMoOWQaLdIJa97I2FchZfuO6ZWDFV+SHTMnvB/SPvUayIYGAwUTexehc3qEpA7ONztwJO/uyYkkr3CT2Y+1QZawjsaryNygQSJBmfNNyzLQBPQS7De+pwqrCu5X6KDC/1g2DI51fys6OCobX5LMELvMRQUsFCXueVV4T9Vv7C9IXbBU9W7VLkLVO5zw8XSTBiV61SnpV/Sxpy+vBPUmahCAsaJ6SeRFtGnJcNoFMjlxYIHMJJYscUYW6kJs3aeQ4F1badv/Er98nJCvV9F8OLL7HAvgNtIClzwKSLLVvBsWGF4QCEA0p36msFzdzqWrUXdSq5JRp67YQIemjYKDVa3q
+    properties :
+     x : 10
+     y : 340
+     width : 300
+     height : 48
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         MyWindow..Plane = 2
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : STC_This_example_presents
+    identifier : 0x2d1b6e4307f962fc
+    internal_properties : CAAAAAgAAADhplYKIwOG8AN5IfPgyt3mlrqP5eJKYKHYbO8AnaNYF1ET3M7kzDzkR5/bTYpl7Wv9GLy+8QeoooIjhBaRZf2ivuQEQaEOHheQ1bwZ3awnrSD5JshfHhh1i5OE6Z6V6m0kQOrqvowadAoBhrQcco+aiFL+9fHXh0Jl4A2Q4Ve0V/eudE3D84C6yEXYSrgyP4gsH+8Zad65GldX6HqdVHO6R8GTmpgECrQtxZeSI7Pzdqn9HBjnS895XOZfC3nMcXET4f3fCjIe4S+66cFBEJmEYgoSjMDUJZ1a4B/qrRTTc9V+UWr3K1N+cQUYkOW48wW7uP92xMBjxzteTTM3PvISFjReIElplu6CsskCWWJQ2JCP69i40bzWG1I3D4kcFSv2kdBvozXfv7/6C0mP3HIB0n3WJiGL2JkFBMSf7kLQu3HguQaaFNlzz2pGrWom+Gyehryc3JL0luRr1y1mmz8U1/O+QKWP6CRQHIMlhHN6PvMCdWwTqmdbKAFjc1TxD+bD6lyI7MVbciGNN2krxFsH0qjSpcUm6wHvqkhA4r/VgkgZYbPB8xGbSn3eu9hTJUpjKoeXvCKes1+Nz+zyE2TUXSDDWuueUb0e8briE1HJBu3s/EeX4nu6njbCmjIPZH6PA1B+ALFH3HKzkk0kcMSEvKtCcLv9rH8Kn2y8JtrnjYlTPRMjKvyq8hbwprnMkPexFk+Paoh5NfEgzt1aTQ==
+    properties :
+     x : 10
+     y : 10
+     width : 300
+     height : 300
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+ actionbar :
+  name : ACTB_ActionBar
+  identifier : 0x2d1b6e4307fa62fc
+  internal_properties : CAAAAAgAAAAAwDeBsRAmAOg+/i3ef7Kti3yl9qbNo69ChQUgcpdT2odfeIzcvkb7Y321f4wRR1TkzgJWtcBBuxjJL+KBfj/hccIBfDnVRPA2vlLO9AnX1mZNkMc/3ceRMFmFFnbRCiBdd1fzFBxmrs4S6Yp8l46cSehUv58CzAtqZPXBVh4OK3NwoxfQzmvAXQtwf5aheEMEfe45Y0w3aBWnayK7X37EWMsxIx68hxct+gYPi+YEIULqgvHniYhKgmkMAnT8niqJz8/hNv/bGmjWGHInEZUaERLRq/fAhX2EaiLRvaRzK/VbPuuNJ0lcehGZapkNi61yXE95jZBn00z83hPhAWCG9HAj/W8ylG3FxFikz+V4YPOkmtTDYOYAof0vIYB0pCE9pxRKRpAukkh73Mc=
+  controls : []
+  code_elements :
+   type_code : 125
+   p_codes :
+    -
+      type : 229
+      enabled : false
+    -
+      type : 239
+      enabled : false
+    -
+      type : 240
+      enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x29f8144500a4e5ba
+  internal_properties : CAAAAAgAAADgMVTORwj2Mt8z/R5WRL0mTVIMDO11ij5YdBwcO3ZAw8tWdEBL95DgWGGgMGBRKql5dANp5Vg/qpNyJvJQ8sIrr6GzC+masJIwyV5P7DpW0go2kGsf4EvdW1eqlu6V7I5EHVrMjd02cTaXwP0dbd1DSbdsd/Wxk0ScMGI7Z0eDsGOMLRfieoTYskOjcLtA7tgFoR24z+3d3zH3Bloaoqj6XKllvOzqHQUKs5ikiJtsiZpXF9leDIYykRzjnC4k4qQVjthAFpugw+diG+HfnEMv+L/rU3DRjlIiDq+0aeUP
+  options : []
+ languages :
+  - en-GB
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAABKff4sxysR+9kg8GIJ708iDvb5GJxqytSUKL54fomJ9xlu42EWUFv/+en+BSQDmdB2krqVslwL/1eyQDVw8sffQk7lF3aDfZNzV/+zROsnKAy1jaSejRR5UgML
+ code_elements :
+  internal_properties : CAAAAAgAAACvhiIr8gSQ5loUp83uTso9CuLc4dExenO6nYq0wt6wNhhy8DIKk+8xrI7GMink5ce8SLehbaZBjJVyvy60Arg=
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      Procédure MyWindow()
+      gsTextStatus is string = ""
+      
+      MyWindow..Plane = 1
+   -
+     internal_properties : CAAAAAgAAAD1bDFZNoOwN7ZT3OHoa8y/gO4+ItxR5fBVZiThKT8gmJGr67gDEbmE6vzqGg1rKdcbRKQtkm32++0MEBDvmKy4KjxqHs28EcKXWLa7I8VQBsRpHEzn7TpROxAIvNEfxvbO4PWiactOM+MetyA60923EC6A2BtS83OcgUOhjKOZHpCGkIkixWJaKirPm0Yvmlk=
+     code : |1+
+      // At the end of the window initialization, start the initialization of DataWedgeEasy
+      // To do so, we pass 3 WL procedure names as argument in string format:
+      //	1- 	The name of the procedure that will be run if the function is successful.
+      //		Its prototype is: PROCEDURE CB_Success(sProfileName is string)
+      //	2- 	The name of the procedure that will be run if an error occurs
+      // 		Its prototype is: PROCEDURE CB_Error(sProfileName is string, sMessage is string, sError is string)
+      // Success and error callbacks are optional, but strongly recommended
+      // This method will initialize a DataWedge profile associated with this window
+      // In order to receive the scans it is necessary to run the procedure; ZebraDWEasyStart("WIN_SimpleScan_.CB_ProcessScan") by passing
+      // the scan process callback as argument
+      ZebraDWEasyInitialize("WIN_Simple_Scan.CB_Success","WIN_Simple_Scan.CB_Error")
+      
+     type : 34
+   -
+     code : |1+
+      
+      
+     type : 234
+   -
+     code : |1+
+      
+      
+     type : 165
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     internal_properties : CAAAAAgAAAAXPg3BUDkwJpSF0mqNao6uf6EI7TtxdlSNY0N5msJcPqQTQF7X+I9L+sHA3AkGcPUYeaCj5SeZfaMO8TRyw9liQ9ojy7DYvMDlF6Iii4vJ5BmXkUfLYoCR78tHpCkL5cNDuHLkWDQmv9woBLwbMQrKiud8yNj13z/zO277bFqg
+     code : |1+
+      // When the window is closed, there are two ways to exit:
+      // 1- Stop DWEasy and clean only the scan process procedure without deleting the profile (Recommended)
+      //			ZebraDWEasyClean("WIN_Simple_Scan.CB_SuccessClean","WIN_Simple_Scan.CB_Error")
+      // 2- Stop DWEasy, clean the scan process procedure, stop DWEasy and delete the profile that had 
+      // 		been generated by ZebraDWEasyInitialize.
+      // 		This method is not recommended if there are child windows that must use the scanner.
+      //		It is most often used for applications with only one window/
+      // 			ZebraDWEasyCleanAndStop("WIN_Simple_Scan.CB_SuccessClean","WIN_Simple_Scan.CB_Error")
+      
+      // In the demo case, the profile is not deleted
+      ZebraDWEasyClean("WIN_Simple_Scan.CB_SuccessClean","WIN_Simple_Scan.CB_Error")
+     type : 2
+   -
+     internal_properties : CAAAAAgAAACgEZ/Ycn+Ga+bZb5MlMTev7nAcU8AY/Wq8LgL/WRnPLBjIl8WmumtVLI2pPpOLr74+MI6+fcx5UlDokZkw/bR2JqbzIYsZ/37cMXdWJQqGDs5fZS30918X9AFKUkU0KC3+TnQUA4u9gzckw/ajnp2StXdofpNoFJz9jon6E3Q=
+     code : |1+
+      // When the window regains focus, it is necessary to re-enable DWEasy, we pass the Scan Process callback
+      // The method takes the name of the scan process procedure as parameter
+      //	Its prototype is: PROCEDURE CB_ProcessScan(sData is string, sSymbology is string)
+      ZebraDWEasyStart("WIN_Simple_Scan.CB_ProcessScan")
+     type : 11
+   -
+     code : |1+
+      
+      
+      
+      
+     type : 12
+   -
+     code : |1-
+      
+     type : 220
+   -
+     internal_properties : CAAAAAgAAAAQ38y6530+WEP+867S9yx/W0CBfRQFhK5ZAzejVc+2T3foPDlNDReP7rob+bXirxTXgG+/I0319P9QYm3foIP7aFM6Z6qecxAFaYKgBcAp3T6FFD31XeUr5/1vPrzvLuFSGUvfZo06wwDpAQ==
+     code : |1-
+      // When window is sent to the background, it is necessary to indicate to DWEasy that we
+      // do not wish to receive the scans on this window.
+      // To do so, the procedure ZebraDWEasyStop() must be run
+      ZebraDWEasyStop()
+     type : 221
+  procedures :
+   -
+     name : CB_ProcessScan
+     internal_properties : CAAAAAgAAAAwX/UB1t5D9nrSF1lwYLcgMx5PCNZ4NVMgdmMFxe50ZtgADOLavMBHHFWSbdIdB3lrnLg8UoBTZjKW7JaWxHJOjcSNUXqk7hpD8Mr1oeK3/bw+Zxp1CbyvjkGnfJ/9D0pyNWfKdLRkc/RVhta57tXgZ4nkYFUP3tnjZlD7GHd9pJHvQvtntfQ1jIecQXg3c1lYbZIumt96fr2+OOxnwxVBMiK9Sg==
+     procedure_id : 2097391285600674556
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the window receives a scan result
+      // Syntax:
+      //CB_ProcessScan (<sData> is string, <sSymbology> is string)
+      //
+      // Parameters:
+      //	sData (UNICODE string): Content of the scanned element
+      //	sSymbology (UNICODE string): Symbology of the scanned element (ex: PDF128, QRCODE, EAN13, etc.)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_ProcessScan(sData is string, sSymbology is string)
+      AddLineToStatus("Scanned data: " + sData)
+      AddLineToStatus("Symbology: " + sSymbology)
+      
+     type : 458752
+   -
+     name : CB_Error
+     procedure_id : 2097391285600740092
+     type_code : 14
+     code : |1+
+      // Summary: Procedure executed when a method encounters an error 
+      // Syntax:
+      // CB_Error (<sProfileName> is string, <sMessage> is string, <sError> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of the profile affected by the error
+      //	sMessage (UNICODE string): Message associated with the error
+      //	sError (UNICODE string): Details of the error
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_Error(sProfileName is string, sMessage is string, sError is string)
+      AddLineToStatus("Error initializing " + sProfileName + " : " + sMessage);
+      if sError <> "" then
+      	AddLineToStatus("Error details: ")
+      	AddLineToStatus(sError)
+      end
+     type : 458752
+   -
+     name : CB_Success
+     procedure_id : 2097391285600805628
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWEasyInitialize is run successfully 
+      // Syntax:
+      // CB_Success (<sProcedureName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of the profile
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_Success(sProfileName is string)
+      AddLineToStatus("Scanner successfully initialized for the profile: " + sProfileName)
+     type : 458752
+   -
+     name : AddLineToStatus
+     procedure_id : 2097391285600871164
+     type_code : 14
+     code : |1+
+      // Summary: Adds a line of text in the element EDT_STATUS
+      // Syntax:
+      // AddLineToStatus (<sLineToAdd> is string)
+      //
+      // Parameters:
+      //	sLineToAdd (UNICODE string): Text to add to the component of Status
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // AddLineToStatus("Text to add")
+      //
+      Procédure AddLineToStatus(sLineToAdd is string) <main thread>
+      
+      gsTextStatus += sLineToAdd + CR
+      EDT_Status = gsTextStatus
+      EDT_Status..Cursor = Length(EDT_Status)+1
+     type : 458752
+   -
+     name : CB_SuccessClean
+     procedure_id : 2097391285600936700
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWEasyClean or ZebraDWEasyCleanAndStop is run successfully 
+      // Syntax:
+      //CB_SuccessClean (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of the profile
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_SuccessClean(sProfileName is string)
+      AddLineToStatus("Scanner successfully cleaned for the profile: " + sProfileName)
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAAB6ragasMBWLfpsSyU19J6lAvYEqFWd1xYOjmHr1XHVZOVmechqLo1vKvfoAJhHeXL59P8BudVQfrBZ/U9vpjDz5RFibMKKm/84EA==
+  original_name : _11
+resources :
+ string_res :
+  identifier : 0x1bb4d37f021c76f5
+  internal_properties : CAAAAAgAAACyXVFaObH4lOGSEHJoZf1MD49w+XTw2LScZCP/urkWFwy+HYJdyQ3umA==
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

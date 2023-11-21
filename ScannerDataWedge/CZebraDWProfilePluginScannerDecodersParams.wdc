@@ -1,0 +1,208 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CZebraDWProfilePluginScannerDecodersParams
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1bb3490c00ef5b58
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAAC2aRddG7lQqybm/6C0EzOEo3ZBPhUEXO79/f6B62zvcgYkHbYZn6UxC9NGXzEYw9LX82lvnPJkInVPHmNBCQSto7J+mMnG8yPTG7KeGRGEYGd5fbOeEkYfC0q9vTtBvw==
+  type_code : 10
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAABvdlcIvkG34nW/Lwq85NiFkqL/OZd/iEZ2t1Rt4d4myv/gBu5nlEHvirc+YfK79JvJfhiiWmx2Crm5kqpS2JvXXvfy4Jg/RjIlxzrIjNvBnPwzTBfkO6X//sQ/uLN0VsdSpdKVMrxJ7bXToD6dpduYhbQ8q+eqLdjQo7NX8ZWgZmlaq9RGe5+ARQMiWQeMagYS2p3S+mZFWfwGgqAR6johtQ7VCFtvUzgYESTDU8fdtpHrqoCT4bpQRlhhoEiPKvOZtIbkInplYJD/WF2Av0ho6vlRUaf+TJKlivnrHR5iJsZmZdVsDkKxiP7AweHBz4AUGRB8yA==
+     code : |1+
+      CZebraDWProfilePluginScannerDecodersParams is class, Serialize = "DecodersParams"
+      	m_bdecoder_codabar_clsi_editing is boolean = False, Serialize = "decoder_codabar_clsi_editing"
+      	m_ndecoder_codabar_length1 is int = 6, Serialize = "decoder_codabar_length1"
+      	m_ndecoder_codabar_length2 is int = 55, Serialize = "decoder_codabar_length2"
+      	m_bdecoder_codabar_notis_editing is boolean = False, Serialize = "decoder_codabar_notis_editing"
+      	m_bdecoder_codabar_redundancy is boolean = True, Serialize = "decoder_codabar_redundancy"
+      	
+      	m_ndecoder_code11_length1 is int = 4, Serialize = "decoder_code11_length1"
+      	m_ndecoder_code11_length2 is int = 55, Serialize = "decoder_code11_length2"
+      	m_bdecoder_code11_redundancy is boolean = True, Serialize = "decoder_code11_redundancy"
+      	m_bdecoder_code11_report_check_digit is boolean = False, Serialize = "decoder_code11_report_check_digit"
+      	m_edecoder_code11_verify_check_digit is SC_E_CODE11_VERIFY_CHECK_DIGIT, Serialize = "decoder_code11_verify_check_digit"
+      	
+      	m_bdecoder_code128_check_isbt_table is boolean = False, Serialize = "decoder_code128_check_isbt_table"
+      	m_bdecoder_code128_enable_ean128 is boolean = True, Serialize = "decoder_code128_enable_ean128"
+      	m_bdecoder_code128_enable_isbt128 is boolean = True, Serialize = "decoder_code128_enable_isbt128"
+      	m_bdecoder_code128_enable_plain is boolean = True, Serialize = "decoder_code128_enable_plain"
+      	m_edecoder_code128_isbt128_concat_mode is SC_E_CONCAT_MODE, Serialize = "decoder_code128_isbt128_concat_mode"
+      	m_ndecoder_code128_length1 is int = 0, Serialize = "decoder_code128_length1"
+      	m_ndecoder_code128_length2 is int = 55, Serialize = "decoder_code128_length2"
+      	m_bdecoder_code128_redundancy is boolean = False, Serialize = "decoder_code128_redundancy"
+      	m_edecoder_code128_security_level is SC_E_SECURITY_LEVEL, Serialize = "decoder_code128_security_level"
+      	m_bcode128_ignore_fnc4 is boolean = False, Serialize = "code128_ignore_fnc4"
+      	
+      	m_bdecoder_code39_convert_to_code32 is boolean = False, Serialize = "decoder_code39_convert_to_code32"
+      	m_bdecoder_code39_full_ascii is boolean = False, Serialize = "decoder_code39_full_ascii"
+      	m_ndecoder_code39_length1 is int = 0, Serialize = "decoder_code39_length1"
+      	m_ndecoder_code39_length2 is int = 55, Serialize = "decoder_code39_length2"
+      	m_bdecoder_code39_redundancy is boolean = False, Serialize = "decoder_code39_redundancy"
+      	m_bdecoder_code39_report_check_digit is boolean = False, Serialize = "decoder_code39_report_check_digit"
+      	m_bdecoder_code39_report_code32_prefix is boolean = False, Serialize = "decoder_code39_report_code32_prefix"
+      	m_edecoder_code39_security_level is SC_E_SECURITY_LEVEL, Serialize = "decoder_code39_security_level"
+      	m_bdecoder_code39_verify_check_digit is boolean = False, Serialize = "decoder_code39_verify_check_digit"
+      	
+      	m_ndecoder_code93_length1 is int = 0, Serialize = "decoder_code93_length1"
+      	m_ndecoder_code93_length2 is int = 55, Serialize = "decoder_code93_length2"
+      	m_bdecoder_code93_redundancy is boolean = False, Serialize = "decoder_code93_redundancy"
+      	
+      	m_edecoder_composite_ab_ucc_link_mode is SC_E_LINK_MODE, Serialize = "decoder_composite_ab_ucc_link_mode"
+      	
+      	m_ndecoder_d2of5_length1 is int = 0, Serialize = "decoder_d2of5_length1"
+      	m_ndecoder_d2of5_length2 is int = 14, Serialize = "decoder_d2of5_length2"
+      	m_bdecoder_d2of5_redundancy is boolean = True, Serialize = "decoder_d2of5_redundancy"
+      	
+      	m_bdecoder_ean8_convert_to_ean13 is boolean = False, Serialize = "decoder_ean8_convert_to_ean13"
+      	
+      	m_bdecoder_gs1_databar_exp is boolean = True, Serialize = "decoder_gs1_databar_exp"
+      	m_bdecoder_gs1_databar_lim is boolean = False, Serialize = "decoder_gs1_databar_lim"
+      	m_edecoder_gs1_lim_security_level is SC_E_SECURITY_LEVEL, Serialize = "decoder_gs1_lim_security_level"
+      	
+      	m_edecoder_hanxin_inverse is SC_E_INVERSE, Serialize = "decoder_hanxin_inverse"
+      	
+      	m_edecoder_i2of5_check_digit is SC_E_I2OF5_CHECK_DIGIT, Serialize = "decoder_i2of5_check_digit"
+      	m_ndecoder_i2of5_length1 is int = 6, Serialize = "decoder_i2of5_length1"
+      	m_ndecoder_i2of5_length2 is int = 55, Serialize = "decoder_i2of5_length2"
+      	m_bdecoder_i2of5_redundancy is boolean = True, Serialize = "decoder_i2of5_redundancy"
+      	m_bdecoder_i2of5_report_check_digit is boolean = False, Serialize = "decoder_i2of5_report_check_digit"
+      	m_edecoder_i2of5_security_level is SC_E_SECURITY_LEVEL, Serialize = "decoder_i2of5_security_level"
+      	m_bdecoder_itf14_convert_to_ean13 is boolean = False, Serialize = "decoder_itf14_convert_to_ean13"
+      	
+      	m_ndecoder_matrix_2of5_length1 is int = 10, Serialize = "decoder_matrix_2of5_length1"
+      	m_ndecoder_matrix_2of5_length2 is int = 0, Serialize = "decoder_matrix_2of5_length2"
+      	m_bdecoder_matrix_2of5_redundancy is boolean = False, Serialize = "decoder_matrix_2of5_redundancy"
+      	m_bdecoder_matrix_2of5_report_check_digit is boolean = True, Serialize = "decoder_matrix_2of5_report_check_digit"
+      	m_bdecoder_matrix_2of5_verify_check_digit is boolean = True, Serialize = "decoder_matrix_2of5_verify_check_digit"
+      	
+      	m_edecoder_msi_check_digit is SC_E_MSI_CHECK_DIGIT, Serialize = "decoder_msi_check_digit"
+      	m_edecoder_msi_check_digit_scheme is SC_E_MSI_CHECK_DIGIT_SCHEME, Serialize = "decoder_msi_check_digit_scheme"
+      	m_ndecoder_msi_length1 is int = 4, Serialize = "decoder_msi_length1"
+      	m_ndecoder_msi_length2 is int = 55, Serialize = "decoder_msi_length2"
+      	m_bdecoder_msi_redundancy is boolean = True, Serialize = "decoder_msi_redundancy"
+      	m_bdecoder_msi_report_check_digit is boolean = False, Serialize = "decoder_msi_report_check_digit"
+      	
+      	m_bdecoder_trioptic39_redundancy is boolean = False, Serialize = "decoder_trioptic39_redundancy"
+      	
+      	m_bdecoder_uk_postal_report_check_digit is boolean = False, Serialize = "decoder_uk_postal_report_check_digit"
+      	
+      	m_edecoder_upca_preamble is SC_E_PREAMBLE, Serialize = "decoder_upca_preamble"
+      	m_bdecoder_upca_report_check_digit is boolean = True, Serialize = "decoder_upca_report_check_digit"
+      	
+      	m_bdecoder_upce0_convert_to_upca is boolean = False, Serialize = "decoder_upce0_convert_to_upca"
+      	m_edecoder_upce0_preamble is SC_E_PREAMBLE, Serialize = "decoder_upce0_preamble"
+      	m_bdecoder_upce0_report_check_digit is boolean = False, Serialize = "decoder_upce0_report_check_digit"
+      	
+      	m_bdecoder_upce1_convert_to_upca is boolean = False, Serialize = "decoder_upce1_convert_to_upca"
+      	m_edecoder_upce1_preamble is SC_E_PREAMBLE, Serialize = "decoder_upce1_preamble"
+      	m_bdecoder_upce1_report_check_digit is boolean = False, Serialize = "decoder_upce1_report_check_digit"
+      	
+      	m_bdecoder_us4state_fics is boolean = False, Serialize = "decoder_us4state_fics"
+      	
+      	m_bdecoder_usplanet_report_check_digit is boolean = False, Serialize = "decoder_usplanet_report_check_digit"
+      	
+      end
+      
+      SC_E_CODE11_VERIFY_CHECK_DIGIT is énumération
+      	NO_CHECK_DIGIT	= "0"
+      	ONE_CHECK_DIGIT	= "1"
+      	TWO_CHECK_DIGITS= "2"
+      end
+      
+      SC_E_CONCAT_MODE is énumération
+      	CONCAT_MODE_NEVER	="0"
+      	CONCAT_MODE_ALWAYS	="1"
+      	CONCAT_MODE_AUTO	="2"
+      end
+      
+      SC_E_SECURITY_LEVEL is enumération
+      	SECURITY_LEVEL_0 = "0"
+      	SECURITY_LEVEL_1 = "1"
+      	SECURITY_LEVEL_2 = "2"
+      	SECURITY_LEVEL_3 = "3"
+      end
+      
+      SC_E_LINK_MODE is enumération
+      	LINK_FLAG_IGNORED	= "0"
+      	ALWAYS_LINKED		= "1"
+      	AUTO_DISCRIMINATE	= "2"
+      end
+      
+      SC_E_INVERSE is enumération
+      	DISABLE	= "0"
+      	ENABLE	= "1"
+      	AUTO	= "2"
+      end
+      
+      SC_E_I2OF5_CHECK_DIGIT is enumération
+      	NO_CHECK_DIGIT	 = "0"
+      	USS_CHECK_DIGIT	 = "1"
+      	OPCC_CHECK_DIGIT = "2"
+      end
+      
+      SC_E_MSI_CHECK_DIGIT is enumération
+      	ONE_CHECK_DIGIT = "0"
+      	TWO_CHECK_DIGIT = "1"
+      end
+      
+      SC_E_MSI_CHECK_DIGIT_SCHEME is enumération
+      	MOD_11_10 = "0"
+      	MOD_10_10 = "1"
+      end
+      
+      SC_E_PREAMBLE is enumération
+      	PREAMBLE_NONE					 = "0"
+      	PREAMBLE_SYS_CHAR				 = "1"
+      	PREAMBLE_COUNTRY_AND_SYS_CHAR	 = "2"
+      end
+      
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1996019375759448920
+     type_code : 27
+     code : |1-
+      Procédure Constructor()
+      m_edecoder_code11_verify_check_digit = SC_E_CODE11_VERIFY_CHECK_DIGIT.ONE_CHECK_DIGIT
+      m_edecoder_code128_isbt128_concat_mode = SC_E_CONCAT_MODE.CONCAT_MODE_NEVER
+      m_edecoder_code128_security_level = SC_E_SECURITY_LEVEL.SECURITY_LEVEL_1
+      m_edecoder_code39_security_level = SC_E_SECURITY_LEVEL.SECURITY_LEVEL_1
+      m_edecoder_gs1_lim_security_level = SC_E_SECURITY_LEVEL.SECURITY_LEVEL_2
+      m_edecoder_i2of5_security_level = SC_E_SECURITY_LEVEL.SECURITY_LEVEL_1
+      m_edecoder_composite_ab_ucc_link_mode = SC_E_LINK_MODE.AUTO_DISCRIMINATE
+      m_edecoder_hanxin_inverse = SC_E_INVERSE.DISABLE
+      m_edecoder_i2of5_check_digit = SC_E_I2OF5_CHECK_DIGIT.NO_CHECK_DIGIT
+      m_edecoder_msi_check_digit = SC_E_MSI_CHECK_DIGIT.ONE_CHECK_DIGIT
+      m_edecoder_msi_check_digit_scheme = SC_E_MSI_CHECK_DIGIT_SCHEME.MOD_11_10
+      m_edecoder_upca_preamble = SC_E_PREAMBLE.PREAMBLE_SYS_CHAR
+      m_edecoder_upce0_preamble = SC_E_PREAMBLE.PREAMBLE_NONE
+      m_edecoder_upce1_preamble = SC_E_PREAMBLE.PREAMBLE_NONE
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1996019375759514456
+     type_code : 28
+     code : |1+
+      Procédure Destructor()
+      
+     type : 655360
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1bb3490700e9485c
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

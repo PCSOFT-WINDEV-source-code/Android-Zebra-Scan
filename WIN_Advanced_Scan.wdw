@@ -1,0 +1,913 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WIN_Advanced_Scan
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : WIN_Advanced_Scan
+ identifier : 0x2d1b6e4207945ea7
+ internal_properties : CAAAAAgAAABas2RjzfpwGVBDSfH2yslfdDmEA1q5IXelzex+WJNquzLExEVuL28HLiYzMEWCjz1wi0/chuNwQFpiGVqXbr1EzFG20842a262qS599cpztUHwmaYDw8eYHBxYIQJG2H/Yp6cXdCID+QtI0Y9xeFoOuLctwIdupmlwBGxnUEt5S2gC0n7dEuqWFwl5MWIBM8vjfsuZi4SxIduE8kWTeA+nXgGWA1Hk0PdUhSKclUCEyfZz59IMMODFgn949c3ifWTiejOINhsiBplFb160+IrO9S8wn6Y+/xTsrxZTzzvzS0HYpc1OIzIq/zQFv3ekOTsAB+wcs4Jg1Lk4Dalf+ryndJlm8iJ1EHu11z23YgVyboBN5LBS9ZlAoEFYyPMZURSA4PFQHFIG2vpydAn/OxI8uJuD9e9pQGIMFiMNieH5+XjRww3TSuUzGoco+feD5pZj3Phl2wX7NhtyXiMoPoG32M+yDAYhSptbTKwghhFfrLxkbl0UHwOw+hh3yU8kQzdhEMeScGu0xICjLqOY8G3ATkqpZmecDa7Mx2quVbuf+2pE/c97/rDedE5eE67SE0xYSQpoa2IdIMBL5B+u2yhgBLM5JaFaVl3w7iVRH7wMNdy4VpJ/TAzwkxZQ4BggGdpSJTr6jD6A10sWs5o5bT5mc2gndiqCLg1hZfXBxWxzV6TiGh2VF2W8YUZiXoj4zHGcbdho6ASL8awiUa8pnHFTR436axlm3hmujGW5FXmNbbtmMY1IPPOPQaFoslvWRXSyiCJtQPyFt2n6I1cmBrmHz4f34cHz7o2NEAOM20J2DQ//9r6ltAMSX2s9Rlh7SKQUKuJ1QFaWQFnz2mEdP6WqgsEn7Wd6nbBK5QY+3owaGxEKuZctJghV0McT4e7b4dsQWOCzg4ZfvnTS74LB66PD8V61nUe7N9VgSCyob4ITfTvbcIUEyYEThQU7JCB2hpofqyIZdQAPcTfQ2Xef3qx3d7fZkmflwHKmgvl5P6wPb6bkulG6jTYGKEQ7S39tWeGm3+HfTZr9rrE1VDdz66GQfx/WWhNwZqmp8ySdNnXQo4haSuSTvmXFZ5GAezAaZwK/xW7asSEBXe9pfln4WihCqZ0CgCyR6ykxOJfsjulUhBq5QXPdfmBAVuWJoebJLykAXeOEgfwAkRjLMWrw+oaHpxFPXIs2mz47+QHj6owMsGP6wW5Kns9T0FvGRprYzXUWjsmfIqODQji93Y6WBLFGmQT41NejwVG5H24WtcF5M55aIWibB+UG4s+OYmw0NQEmZy5Tb5DmNKKWkTyj+ijJQ8zDwp3qIdMW9AsGrjLrufg05n2a/RpWYBIJNI8hCV7+cLlPNj8V65Kf6ImcoKF8J3nla/nnYfDq
+ properties :
+  width : 320
+  height : 407
+  heightMin : 480
+ controls :
+  -
+    name : EDT_Status
+    identifier : 0x2d1b6e4207955ea7
+    internal_properties : CAAAAAgAAADEfYkMiEBaOPovMsEsWHe/KTwsEJWpG8opj6di5kbKLPC4PT7wifR5GSJV12rqQOYOhduum63NTlrXkCo8v6XaEkHat/cd3EiFYK083aQlLInvBRuQf+V/fbtzE4+4x/PUQlfGVOykAcU8tLQJ1u7Tf46GwR92cV670dCyLp+ouyvLrUO8f3W1Y2VKLzAhJzqcP/81hNOmYE7m3YOu5qKVO/gILKEOiwBrJp9T3ggwp0DCPl4QTmE5dSpUGgNcJf/hakaBD3BvEI2zq/bCIsK4MsrrylIKf9ol706cl6fWYhgpFlzga6RC01zaqva2YapWCiRV9P3wq80NHQpbu5MOYQsL8kldl3IRgPp6yPQx/Rw68HopjWP+A3si0AsVexR3P3IqDnnAggYPh9Q/p71DpoZW5vQMJ14GdgQhjRHqddPxoHO4Ig05PEJnEHSCrtp9e5o/CCfxpYX0zJ0zxiokej2rNhmUWe/C2GbZ9DzKE49bdnA/KNzb8JrOY2F4TLfIavsVmkxs39SqqJm9wYJqEipN0xbAklcXJuyW3qr6mGE83+3Yyi7jDha1/We7Z1XxgdbDE5699UMYQx3So7cXAF+M8aLNgiyE+PWC0MndNWDJOB3Ws+p0EaO5F2tc4+6XmPRPrnqb4DEkqW1/1qaWXc7w1X2ALIj95WBJMwIH9uFQnAl4zrMFkKOgVsCgMoC8SLJfGYltJsZWAmsR1lO9XLJKw1fQrZ5SszPMp6MV9Pz7F8aw+jTrsFAyxZg0NcA+p1rPM+6MDnF3396Z10H33mL6vdPU+cfrZmlDZMrq0W1SZQA0bghFNHIiEv3fVHRz3gmG1gw/Y/KmoeT5mDHiUsP7+PwCu/ndp+t/BdnkHyoeX7dN+zC8lD+1zV1+amkirON2Kd8Ep07445c+fVp7zFdxlobe/HkmE+hhgjj502V8O/pUssgyQDEs659/iQulsd8E3rdgN+7R1mTKLApgYbpOxA+8Tj88tw5xBWgzVxk+6zUTNC7vKLy1AfT9YhgTxeXoMhIcmZGMjplVY/cRyC3e1lfbFhTyoWBUTBVxlFyNwZA3gcL7EYsgWeGu3Nu4iLqrkQAH64BksRYyTkqCCH/8eqiscq/C4UQIIwd64otdnOW0iMq7KVhOmJtog8rYEzViO6A=
+    properties :
+     x : 10
+     y : 9
+     width : 300
+     height : 75
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : BTN_Check_profile_exist
+    identifier : 0x2d1b6e4207965ea7
+    internal_properties : CAAAAAgAAABpCS6SB0mMd8vYYtwpDWxK0bAJxcD5Cq/ch3jyX1gHL+NJj5jdkub/R/jvGAr7fY6o5iLYLFhL9KHwL+JwHgU/9D2AFY8zftWuJFbtmpN3Gg7o3s9SkMIu+wgSzAkiXI+fp8LagKPpC9CXtdAUNP3vJzj1g5VfoKdzetq1aZZRwH1dKR63VaYM6Rnxu3fJCeixBuRaQEi1IYC3AxK0kXHfme9a5FOKUJHO7w3tKdU6BzaWzQXnbrMaeRtcPNkw+VPOWSy0DEiTXbscYEArH5IgvOwvNldIzBD56yOaEhJhVDaO4qHcIOgGw1QI6uwHolvlr2kAUh3n0VKhGR73ZpG2CSDt4ul4wLAdLYlNwYpQtyS1xgU9umg99vwBXVut7Tr93F9U8qBHDw5N+8iHlQR6nyzFA3cY10+PcLOY7OppUObrsChNLZOffAke9V0ykGsrBr1qAjiQ0nT9ub4akXisZwFe9hoDpMQ8mTiiOk+7vEBDYd1X1Xc3RzxCQRZmjtyHXjQAczts6DXBrZI9RYLDm9FPIvnZMfYdTk139kytDkmrzjrNdVKrfpSvg+ySR5fZXqAH/iuu9hAttbgshBmEEZFLaWJYfRgUes3TMF76OGQKgo/IMLUiZ8mYlB5chC2x0vfJYkAjBA6gq8sj+bnYqaHUr53UYhzxT+J5Owq9qiFLlwK8J8+6rrFD1dSE/L9cWnU6WxwLipKQ1tb5oM7n0+gGHz8KUR0mVKAQA/hDt/cIBv2b85tnXenYjcEKL6qFsce5HDqgR6UTTuZ3W/+DwWMwabdUEFXdZivpvi/VauBCXaHP/e2uc1DKyDWeyqZRuN5KCFOCrTmp5K7RjgznLYTgRKgoteI9jOR1kL9bR+Vp3KFWT2JA3V1eQ72u+mDmNitavpy2hZXCAezNTt1hqRc6Bbwy4WCfd3kRcmN78QNN3jgBvXSRorA2I2woSJphJaYXozsws516cIhMPpUFXV14gTgpo+nvVR1n1iFj0X9uv7Rqrhb1jhOSQUoVobIG0S7MzTVy
+    properties :
+     x : 168
+     y : 364
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAAQ38y6X50e+PNuk06i90wvG4DRDUS1FB6ZwyezFb+GDwe4vNntDddvfkrbGYXiL6RXIP9Ps9WtrFfomjUXaPvjYMuCzzLmy2i94bpo/cgh5TbdnOUdZd0j3/XnxrQXxqnKkTOHzjU6wwDpAQ==
+        code : |1+
+         // ZebraDWCheckIfProfileExists checks if a profile already exists.
+         // CB_ProfileExists receives an boolean argument indicating whether the profile has been found or not
+         ZebraDWCheckIfProfileExists(gsProfileName, gnTimeOut,   "WIN_Advanced_Scan.CB_ProfileExist", "WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Create_Profile
+    identifier : 0x2d1b6e4207975ea7
+    internal_properties : CAAAAAgAAADaci2sgWvbu1DMGOIQOFaj0B77yFXg9HwJ3dWeYOEE1HXqLGToMBeqVW+HJxNERu/AxuohfbP3FysxV7hjoz7VVPYBR2fOVTVEs9ynI6F7hk0oghBy7ZA6IG8MEFh8zbQq9mT9SXV1y/fqlU5rxm8pS3sREQKNBeFzHSBdVN4PXtbFzZvNTA12EM6OL+uYeWmXrbBJPmSat4U5jMhPMq866eWJq0T75Ao7xkgppgk55jddqCRWJDRYNadMA8PquEK9fX9RRCAMaM3q0SkKwuvC6yfDWgapAWHHdt/RoUMuTVSZ1ELGSaqz1EwK7sT1gUbvR/0Cpv9iTqhuHe4Ii7HKrzeY8FCjvfsrzETefOM8KfMnMpZP+wGFRA5gg5cooW9VMygAQ4yuQTIRRhO+fBgerjROSZ16UNrrE3WOtz30BIiC/CRWgHK6UunLqXi7o/k17T3KLs8FwV45+3AHgD0YQJKipKYdHWTciWY8tzOpTTREsL09WIxYukJ+yJPJuwxPcgjong/YKc9kzAKAQEMcBLTFcqJIVc52lSnGznCrAwTir73tdI4aftGiB7DjnY9+dWpYwhqQIoFiG6lGwlpUprEh8jBQnq+dGyP1W8a+YixW6JS6Ch49qGupZ8ouB5GPlDv8RJR+b8wAsu8fO2VTPPh5YztgDcK4PpfGlj5b9SARje0yFjEqPXDxnjJi3QZ0kVgrjgQwfA2Tr3Px0lAY5EjVTAnFPTCC2Xa8nvKbhYQWoLHZeofzbv8LLYsgxJAiCzhJe8o9xBPb9kyij40VCzVyaxS7EJbEAcrPmUwP5x33Ve0/HvJetdZ+ZR0mfp96IAILOPCo4SMw2lb/8932nrd4nUY6yYGPRarXoaiavhJe0GSQESz3eW+sIhXbX8RZPz7a6VAlo52Ou7n3T4KDywCojNteXHSJedrQmj5IIiSEFc1kN9cA4nTanFqibKcD3pKnoZUeN7KHtjEoBwI5V53nrGH44qo1Ezz3QyzJO8mv+Oz2bE+ZAiHkV+JUfHpeTLSy9iViSI/AthMTLY+kp+3Ai+I2rO9K+t15zzxEnFLg7j2ArhfRZXYmmXAU5NzShuCwXA5at3Hfo+e48tbkUYNnNr4KWuUAEoW7/r+1xYckXPFgJhe+tJyUUWSQcvZIEDNq1xycU1fFO9XCxN+7zVACpTnHNND4BpJvT5DJVe8r
+    properties :
+     x : 8
+     y : 321
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // ZebraDWCreateAProfile creates a non-initialized profile by default
+         // If the profile exists already, an error is returned
+         ZebraDWCreateAProfile(gsProfileName, gnTimeOut,   "WIN_Advanced_Scan.CB_ProfileCreated", "WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Delete_Profile
+    identifier : 0x2d1b6e4207985ea7
+    internal_properties : CAAAAAgAAADQbLJMGa/omOJ3mXZQhfpvya5i+KbB9fFOIp7GzdvZf8Y6fJuAn5o1YySyfpJNysF+9C+VrR3MtRnbtJS888j4q9SYCwmpegVCUaUX7KLXXjy0HjBgNZe38XoqjIQ5h+wC1/m3MuXDL884Y4X6gLJer3nuwegaP8N9uwmjxCWw/WiQtuWFcv8tXKEwpui92vqy315W8v+IPFIoUFkeQhd5XmplJfor2e55XB9DefT7yTL34xavfnqqiY37j5mLuPYvAeAq/NopmCqwRdiSEE4V7twsAKianFRd/GVJwxyqhlFBiE7dr/JeP+dDb7UhKMhfM+9nDLlZvPgNaGEHMpB+dRUCHsoBWocD625AACX2C1OHdxc2brBQLMJM0ZhwN81pAUI7UlHWgtN3/yxQ/qQJzROpiL9RpH7zWT9/VIfsi1vimk0+hJpiDjbxSGNP/45cnX58eTCaHqXrG/zzhzLVV18XSNILZJrrwY/k1Yzy2csSoMuAUOBNEo8s4519KpGuH6F1m4MaaXcLnl17UQOuyO40nFhxGljnptx8muAWoKT8KbYHpDKPw7ySP1aIaOwcUd03c9Y+8fbINrcx+GNsHGHUc13vMaRlTozI6xLiWO+GJRdvc7MYFss3AXGmeDnQbGr5ofe9lrHQ7B5cQQlUSJupFRxz9rrOLZNEwERZ6nhBwqqLSstks9nAhMnMFLPfvKQuUE0jmhVE62UOeLAnBnrHiZDrN99zoMUP7IZ9LfzUlTtqIrkLeomPepjchwaW6c711yk4w355gc+Og5FveM31tz73iLESnn56JRU1MFdmOIFIWkuaMyQk9JXDuFCN7GPpnO58gHAD+3W9jpx9RNcRX80T/udeZp2mVp8zJvy4+L4OZf2REiShmI6Mutz9ETr+tYdR95E961vrD0RRgIu3vOyOplNqffcUonGVrLlaZExw/z9xua0DfSUo53igImJ+Tg9rP8CIQBnIbMP5XqlenIFfrL3gpEjPIEYAIQPplOIgDX1g8jvZy+hA6detOc99l+NiUvtMGs5YdGtOHWZXsxkpJxD78uE1M4vIFMajAG54ADjlhdBmJHcMmMEEJNK+fLYHAx641LzUrzRvOYnSg0cTeZJ7JobGArUppUKy7UaAef9aYy8jp0LyCHkK0YpcdEJMvLdSVILWq+kTtArNrmWG+Tg=
+    properties :
+     x : 8
+     y : 364
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAADQn4x6b71+uPMOU67i1wxvewCRzWRVtJ7Z46cT1R+GD2c4fBmNrTfvPqpbOUWC7+T3YL8PU2UdnGf4iiWHGEuTUJvyP8I2+xgNcaoYLbhxFeatzJWtdc2Tb0UXtiSHllk6YWM33oX6A0CpQQ==
+        code : |1+
+         // ZebraDWDeleteAProfile allows you to delete a profile
+         // Since the latter no longer exists, the application will no longer receive the scan results sent by DataWedge
+         ZebraDWDeleteAProfile(gsProfileName, gnTimeOut,   "WIN_Advanced_Scan.CB_ProfileDeleted", "WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_InitializeProfile
+    identifier : 0x2d1b6e4207995ea7
+    internal_properties : CAAAAAgAAACKUpOpjvPz2WNSGwRc4eWfFHCs1DxmpRYwfuH7ZhttWXy7EYoq6DmAJuJv7dv9wO4haIWPMp/kGs9Z64RkrxS2YNL/2uDkRtFQ+ejYW2iW7sQ8rQXWtEA1xXIH9aNwpefKzDUTgAcGVdUgbghV63Jooi3ulVSwFm4NGkhFvMxvvLXUc7IEPh4hJGsAJD4Sqcjneq+kTAA1jV1CDLoF+wcFxA4s1DQRiXkAOfGlb4DuMN78J2HokaE5Px4UJ7JHcEyN9NaZCF6t9cbr237TjvHcjVgKq5DdAoSmsV1Il0B4lNSbUirnG4dPnSy6cmHrPRxnUjecCvaDpHqy8ZijF4ZAyf8+UjSBd5MzI2Tn6jEI2u9qJzRyiX2JABRo4I7WZAAIiZv43wmio1oWCESR7Qa1fLsOHHlk1O2/MNZmQcsTI4UMC59AswalyMbx3phod4kvHV9xdxNTNI0uCMB6UkkpkNdzRB9SY3RdM4Ci+Z1x2Lo5LfQeWBPepGDKcuVvRZcr0aL2rrWFkpWetBL0QspspbNRLkv8UHxKptipjuizQ3HaPpES/MnacfK67AOHaE2iCsOpI5XL8Lp1Cxs6+pcN7Yf5728i3kyYafUOvgUwrMwI7XSRwhfvRzSGFOAKLymA9sXkIDQegCPD546gN5FCf2pdhKDW2KswiFql3/pBNe69kKQARbgf7F2rAmaQ2Uk4VZas1vDF6vu1OV70NrnOvHFOo7isRN4F10WPBa/uAZJsWi2n6funlMuWt1H9W3O/MYCxmymlnmpuRm559wiNQhQ5vuFvcst33jUouTO9SU2fYY8I39MaxgQHG905yQajaTr+Ge0WG8yQZm5XDvruodZah5SAXpunsf94VUttuWiKuHjcK9/XI32EduNNjGZoA3LQmsbVLZDPedK0sCnLI+KkS/cH6ErgGtC+mqMNO3yAi+ztFcZwRH7v00ElszC1ojYYF0VqFu/lM6sdi5c5WyS9IszLLg5SuAQNVVOAV0xsORArqVx0U2xwWdHL4mjY5pqMpqHId7Xs8EmjhG3Kz+1YJ9I+LxtMbP/73ch+v0JkBN61tVmuSNae76KTE1xefrp0arKCpKMlhmSLd0wdsDP2La9c4g5p4stZI5Gn2ozffYitEoqeZS8D9RlWNB2O4KWLaH90hQGoW0AKc3/gpaJgfxKR/C49rRHmerIA0hXQ+V7qBcwRDiU66wf4GgCazWKyfevV0jilTt584v3OKM2JfjsqDDHvOYmHzZtQeKSidKInhhsa9+09J7xzwN6Z4GL1WGiUhGu4HYfH21DjWoT8TOETXC7qIIgIHRzhs3cGfeXU2zWE70cskjty/AmCZVrWcJzcQg16TIpIBkFnErlVr+I7nbEgkFzFuLYS7jZ1Z1mKqAi3V+FP1uims4v8YYzDA0L7YCPi7xd17d6Y8jIe3gM2iRVGytIXNshVxYjqJmTq0IqDdd8=
+    properties :
+     x : 168
+     y : 321
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAA7fSJ4tQ695v98H7r8xzi5+w2MfOitUxPHanuYqCVvt7G01mBbeHmNGLOzdJCe5c6f6orA0NTWeAoxlCkkrFr4EdXofzmorJyw8i64Ov7UHk/93McOFzpbHLzJIDtd0zgp2UvFph5do1Rmh9w=
+        code : |1-
+         // Create the class containing the profile settings
+         clSettings is CZebraDWProfileConfiguration
+         
+         // A profile name is specified, as well as a maximum duration before considering that the timeout has been reached
+         clSettings.m_sProfileName = gsProfileName
+         clSettings.m_nTimeOutMS = gnTimeOut
+         
+         // Configuration of some parameters.
+         // For more information, see: http://techdocs.zebra.com/datawedge/6-7/guide/api/setconfig/
+         clSettings.m_clScannerPlugin.m_clDecoders.m_bdecoder_korean_3of5 = True
+         clSettings.m_clScannerPlugin.m_clDecodersParams.m_edecoder_gs1_lim_security_level = CZebraDWProfilePluginScannerDecodersParams.SECURITY_LEVEL_1
+         
+         // Overwrite the profile (we assume that it has been previously created)
+         clSettings.m_clMainBundle.m_eCONFIG_MODE = CZebraDWProfileMainBundle.OVERWRITE
+         
+         // Initialize the configuration
+         // This method will pass the content of clSettings to DataWedge to define the profile configuration.
+         ZebraDWInitializeAProfile(clSettings,"WIN_Advanced_Scan.CB_ProfileInitialized","WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_AgressiveMode
+    identifier : 0x2d1b6e42079a5ea7
+    internal_properties : CAAAAAgAAAA+fyXCGTmmcx6K5mZmVb2XVCbg3jYJ06YzA8ZHgTNZM3tFwTSxmJi7itQPgeEY4ZpWnH3MGPm9sHWgGTFR7K6zy3bcppwqgIefhb9Of5ot/DXEJSxQqvwGxtM8e3vpi/drK8RTXCgxD6VBfwKKY9UQN1OjlAyk5x4E4twozDUp7paxjZz4lm/kgzqCNnbpsgnAs10i3Ok3WHisK2pfPazeeNWH7mQYV5/HvEZ+o40UbrxluGFZ40nchn1eGySc2oUt9zErVmFj2PDOoOeWIR96wW1Sl8Ca24w0TQYF5fS2I4ttUuVsifNlcLqQP1q20TJHChMLfGA1QT5bq1h/wamxnnJ/Ung6SUhIiOGZMK7vdmJ2SPgNb4qtRheTXB8dtb+sODNvOW7V2Akm2SucEXG/IcN5FexTVx2QDItfaWsYKXlLRUVZNjXWuV6b2R1Nm0csYYiW8ROVdR5FqSM7G4/r8ANokO2e1zfAOxE/XO8uUWOwYiy065KJfaFk/ERZjxRGGqO4OvLspEpOF7kTe2tUMiW2NDEBmkD04ehCdSx/P9SWCRUpdHA0gbrcnTB+g6L+3eQrdjtcLN+sY2ij00GBIkZ1Qa4vT2AB/GSDnEoC+M2Hgbv3qFTSx7JEmvQJifgQ76aXCPdTJpkpc9PlCdVQrui+ssvkFYF+yVqljobH2yGZyRaK9+aFvNq6/D6DC6Dhi/wgntucZmu5pPyo5SbZSmCCCg5oJpLxkrNJJg57DH1v3lIBrl/Unu3JWKgAgVIdJfjc4mw3IuQQw+MTJmlX5lgdtH9CdEV4y8qODfxZicgT8LQK7gXVa+qLSQDmykVAhP+5rAKj1lsF1ECRQoy/QqmJ4wcobuqh7/3qwlbpVzF90JXfOGLfiAc1hdsVdmNZ0gghJSVQlwJ9F1mE0L0aGCKFUm4JWXeJgNWQVskmdoRiTFUX9rVEuregmjtvNUv+4RIN2ZEtkhAaTFD70S9/VxPLEfDvITVeQKU7XX0Wyr6+qqgSY3UnKvA/AiOXcZPIGUPK7Im/ZSShIk0BhrWFTyGq9vdcZcY5B/ftFMTe2K1M9dOAgio5pGunLvBm3D6h5MV+ci1e81TzBnqUXaK8FsVNtbTG9nE++Ag2VRR8Ksm5paJdkaRsM2G59xLBYNZVhAISB2rmCpS7vJxHp6ygGPhV+OgIrWHuqienSbdDAGRwRqchZJQWxsMwWKgv9fOvXVOxF/8QTmGvP4ZcaHciz+1Lc3jlp6xXwqVgOCWGFh+gan/UdjPuRHnXEcZgSFMCU1OViVPSARbkz5dZtNlGIWxMdFg33CIBNa3690UktbhvAebBbWcx/FQ=
+    properties :
+     x : 8
+     y : 241
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         // Create the class that will contain the scanner modification settings
+         // Start by creating a class that contains the default settings
+         clParameters is CZebraDWScannerSettingsModification
+         clParameters.m_sProfileName = gsProfileName
+         clParameters.m_nTimeOutMS = gnTimeOut
+         
+         // Change the settings to switch to aggressive mode
+         // Scan as long as pressed
+         clParameters.m_clScannerPlugin.m_clReaderParams.m_eaim_type = CZebraDWProfilePluginScannerReaderParams.PRESS_AND_SUSTAIN
+         // Set everything to zero for maximum performance
+         clParameters.m_clScannerPlugin.m_clReaderParams.m_nbeam_timer = 0
+         clParameters.m_clScannerPlugin.m_clReaderParams.m_nsame_barcode_timeout = 0
+         clParameters.m_clScannerPlugin.m_clReaderParams.m_ndifferent_barcode_timeout = 0
+         
+         // Modify the parameters
+         // ZebraDWModifyScannerSettings allows you to dynamically modify the settings
+         // of the scanner plugin.
+         ZebraDWModifyScannerSettings(clParameters,"WIN_Advanced_Scan.CB_ProfileAggressive","WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_NormalMode
+    identifier : 0x2d1b6e42079b5ea7
+    internal_properties : CAAAAAgAAAD3lnmlcT83R9Ee/VFHMTyxQCJifbrMopeJl2nsIxSKg/WIGboixHFbWE2TOdDuRol/nIq0SYEuNWC2jVZIy04anwm/yzZSm6ehZJ+2giO55Dus11X/+4S3w+zLJOKhSpYBMyCWN4tv+85uD2AVdRMzGclfXhDG4wirsrIgMdlncKiWCQCQ5xpRJ1eFvGqCPdIx6kmSOgR2PiZ41PeIVh0zRQ5m+1atigU+0TNpMYH5npVjEy+KJktoyl1opmkyjU6n+pXlzt7D/xYPmcZwLwdwm7XfMB4DOtQ3W4uethzxyQT9Z7pBCl/Ed9WIolL6w+0WxRWmtlpSVVDeylUymsekCxbdQvIGOJYyfDjwBeX04X9ZMsK4V4rEZQPC+aaTB97UMJYUaYwlrjTvLckISwdKtgiWNuZ1bQb/ihwUtVHbQQ2tkQjibvOvu4aIPChfjTo3poB9gVmbPV6DdfcNJzNlJa2NQW2hGtsjZZddmS71JWEatiZZ8TOESlqN7kVlRWneC99KfwmT3usDwz1RsYbyFN04ORMp39iwGhkoA3JeG1vqttnR0kfj/Nqxdit55bnwdGJ0gs7B/NeB9RrXabtsevhAjTFZBPCZI3pHDMKfpZnH1dc6OzUrEJlIL9Oos1pQay3J02x3nuQVCu/f5zAlq6S0nO5MAMVI1kzY2WB5tnfBvOHjB/HtlqO2/TtJgT2pKXUlZYc7+HuMnN+nNQpaMKYRfX1yGbyd+wWiU0wxSS1jiVUunFbGSiwpPaWQPW3jnQOL0daanvIt9YbU1KfsxghSyaK8ZUHi5BzpsrarNKjBfb3jsrxNEVHZ7jmmxQRmxgJk7ZYiUlsAKNxr7q+2pqNMFW8kK/AzYushjQBr0tDDRze/Ned3Fn1ujZkAkQE7gAOzfTLFHH0ZXtJuESaz22kSG5vmQD13KtAZx+uS8MXFITUGWH2/fakAL7p+s1zU2yJMmXirktj/aPusI1MYze7knz9N8nAtTM7Wl+tktF1NOhqtK0PFKA6fQ7vsN6ADpeS50bezq5veFZe79vLRKsQ3SEoEgtKT/G1w9bumB2VY1xFBnRoFzn+BtpeZNX2XmsC1NwOvbNv3+qBl5g/tgoAtZtxN0zVVyMGlJvxE1ErPINjrojTNbEGOj80GYyElhXL3Vyx0G4EfE+llWdWPqfPIV/ZeVgFEdfuCB+wailwCLi0KjMxZNENAJa1GA9exBLcXOtt8XxicVuJ67TXxaQzARLA=
+    properties :
+     x : 168
+     y : 241
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // Create the class that will contain the scanner modification settings
+         // Switch back to a classic configuration, to simply create the class and leave
+         // the default settings.
+         // Except for the profile name ;)
+         
+         clParameters is CZebraDWScannerSettingsModification
+         clParameters.m_sProfileName = gsProfileName
+         clParameters.m_nTimeOutMS = gnTimeOut
+         
+         // Modify the parameters
+         // ZebraDWModifyScannerSettings allows you to dynamically modify the settings
+         // of the scanner plugin.
+         ZebraDWModifyScannerSettings(clParameters,"WIN_Advanced_Scan.CB_ProfileNormal","WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_StartScan
+    identifier : 0x2d1b6e42079c5ea7
+    internal_properties : CAAAAAgAAADylwS2j76Pbke1OCdj936lr80OOfY5HN9yoyqdc8S/ujFP9vO73Y8UP4wxDmwaWpE37u2P22OnoCkUtnFh/W1U/OciqqbR15AME64so4KahRIk51Sos00obQzcgkzOOgsjuGRyn0jbGdmd2gtsqF5scUzJdxS8Y/jlQgpLbTcotPDwivIVUv+uh5Htx8o96L4/7DLbVWI1HlNtRRq7rvrt7te9CTr7zrU2iebDHQxiekFrJNocDHQ3aNjMybs26AFEdcv280UgVQc0o6ZV9TbXFjwXXDV1rWVeOV8gDuXwZ0w7U/gXAf6CdrL7IYROJjwjjsxhdY3y7GGZoh9BLoK1wvkx4g7Jk7w0PentEjXEc7tN98eXSDTSRqIvxPfWL/FDCvXYfLvXc8V38J8eIqCMa371X3OdthswcmBFekv2fwMqhr4Qudv5NDeVmRiKZF/vxb1ho8wlz5A925k3ytqng4cco+5IzymuiMIy1nIQt2BDHwzLbbTqOtCmAYX/9Vn23Tn/+ZI9xEuUO1Ssk0KVeUSODQSSsfk+6vncMZdafaz9A3yJNKfJWJrmEjEw7YMrs88VnjWL8QwGcJ+KIozJl7nO3UVJ2WmY2nWmJaL90Ig9FQKlsdhRj8YoffOEc6+1yaCl0XtJxfQ9BM5qYKfu49dI2Fydz1wBgGr8eHnWJKz5UhBg85QfCNVBZSv+JDNr9atSh3M1xLWdGUDn8kf8X7v1qotT4mmuvlh5W0gI4b+dPCTtULlFDLd4WZOECUE/5VKIi2YvDccRS4fJseKtLB8DHzNTD0uACdIsf8hE++D1mai5OZw7bs8fpRVzz7L6vLoMwGty1WU0tZzY4AGKSVo4vkDsK0dN0pPBYHV0RyoccW3ALJirRFNl9WzbdMrsdTLsC1FaR/jD6F8rogAj6YC3MqUkBEGr/QVc7d2enn95lRrwxHLQLb1ZyKGgqCkpZEbhMnUebfVEQOoPJxv+EwVwlL4MyHrtfKMhR+t0GtLCwX0qlvr6120I+VHMljJGhKuSuB38m1HoEdKaYI0I5x8jR1k5zROL+EGMs3bM4OglS8LQW16hV7U7lyeWYRDT/HoWggGy5LUkL7RUOCFqW30+93hNHsUG3QV0nvXRm5mWewTzWNfNFXehv5eUGIlhH3w+os332XbLzAD5ze2TKIuqi+pX/DNOwfAGJqrqqamgXsD2m94C9aTPNFn8JYkkeMPPFehk8lpV3zJbcW2AYgkLvjM3RJCduF7UdkxHTE83uHrfwzVO8Tsw+Ugxjh9MduXzbqnq4aQculL57ktxvOdtY9M=
+    properties :
+     x : 8
+     y : 164
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAADWB2XZ5MvyB8ZZOcGXmYtbaiScI3zcrf5czlgJT6EzoPjYpxXkjmeJXC1vYImjp7YCRELqs1DdLuAYg58K+bR1KaH2LnpoZt9zaDCFzCGLoWX2jGbb/g6Mb5zTufybbXC9TauNMnqEiFY1biskzwBnllChpZwB5a+ym4fEJUI=
+        code : |1+
+         // Used to start a scan via software (i.e. as if the physical scan button had been pressed)
+         // An error will be returned if the scan module has been disabled by the procedure ZebraDWDisableDataWedge
+         ZebraDWStartScan(gsProfileName, gnTimeOut,   "WIN_Advanced_Scan.CB_StartScan", "WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_StopScan
+    identifier : 0x2d1b6e42079d5ea7
+    internal_properties : CAAAAAgAAADBMBEZ8ayi4YDJK6McR/oGJVixKqS+EzkPiwiiqTrca6LKWzcrwiGTepuBAJvEgVRNCe3cNTOFuFj0gJqEwTKVEL7s4i2a0gZFYctlGGS6YgNwTBjPopwnCoHLdKrcWb9ovjZagFpTEraGIRHyZZKfEgEQPwGR0kSOvxBFADur0hv4VJGX9heivXaMjGI4qwbHRGzUf4BHLDsVFot5qbV0zT3p9Mcj5194e9dJvKtAboosCx5tVbHcY3GWDeoHyteBqDYG74crEaNm3jCzQjcrxYIWSsHJxIc712I2eZr0fl+l3AlF/5rphqQ+UeoVOuG6kCMNI5RGP9R8h0S88+lIqR2eH0qjyn8GmALBjlxo0qd7YcJ2qftVoU292hD+lm1v68JobsbaMEkY9byQwb/LAyErBSahNi8kPmMQmCXYE88OOXs0V9oWtq4mVGe4g/NDIIqUwfRgVwyQvQhHdLoSTgsw9JWHY96l1/AXQyTMuT64LSXs5hoUbSKnr4zV5mKu9cA2y8Ndld2AHUftUfS5tm4z43YUluzE8qysvOjTBPj67FWK87vODE7kgXkmsB39NryhkEVwfOI6tJ4p4oR+b1fxu+W1JkSoPxdETExdBTjMP4Ca3VzUIW+gIJSeBG/IAngQFSIbrYRa8C7fkahZKH29ur20xPBnO4i8qyzxKScJT3BxhEcv5p5XUW5btS64C3IMRJBkUnlGoURwM+gBzo8qiLRAIXUoowotniHd0goDr2zaSyJvmPh4RzyNIkCgk+VyaFnoM6vitV10ECFOCyG0F9rIpg/WYvjk4A+j2FtdAOqYLPWxBsp36cxmPh0jvH82lkXszgCiBmFWKLUsF4Xipc5oAynpYcMPAfqV9CW0YqvrAT603/vkdTonVKR6lUe7u/bnByDvp71jfSsiPIkJr9bLT2cKM9YnecjyOAjpfBZjcjc65c+DhvrXn0ASKuaq59Sx+nfSimQWUL0U5fBF56I8zDS0ugszwFcCoJ6gr2oqyFYjkSjty/0GaPggkY9JzS2EU5b4Hab7ipaJJb7wZEmTLJcUomDs8p7KpDvvFPdrlBRaqsemv0Hd+XxCFhhLNKF/y6SKZRSR7oqQyZegvmlaQsrbA0Xu8Iesnpfq1tXwidOraNwHFIPuUTdxVpLuA4rvY/sRIBCycSzgVyMEq0OMrnN/BhPVwFTCZKNw9gvuXjPgIMRhUt8y04nPJUGuIN341eVMrQHwW9yTJshA
+    properties :
+     x : 168
+     y : 164
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAC+uXpEl1oFWEP+867S9yx/W0CBfRQFhK5ZAzejVc+2T3foPDlNDReP7rob+bXirxTXgG+/I0319P9QYm3foIP7aFM6Z6qecxAFaYKgBcAp3T6FFD31XeUr5/1vPrzvLuFSGUvfb6lU3W6Hrw==
+        code : |1+
+         // ZebraDWStopScan is used to stop a scan in progress.
+         ZebraDWStopScan(gsProfileName, gnTimeOut,   "WIN_Advanced_Scan.CB_StopScan", "WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_EnableDataWedge
+    identifier : 0x2d1b6e42079e5ea7
+    internal_properties : CAAAAAgAAAB0U7IPojwDKBAXYpTwEKcZJqqX54Za1nQ26YK/PtmvomLVy3oX0QmurwKfoeLuVSegJUblJldKRX84QPO5ZMyDaCNcv1LXZ/u8Rt/KEetd2UUddyO8NF375aKp0zaIXL+4VT5Xgu/tKYwfBLy+hfcFhDC8s1FlM2Uj/czIGfaLqUR2o5EY/quzcaQyQvejAEvH9DXpQuFPMREnv2YLeaYqcOSZlkje5+cH0ox7LgjqeHQrV4xvqHrneBQ0VqATNMJGx30FdnLijtqnw4pjFCgZ1IxjnrRABKcxVnHqQ6PFj+VNpvM1mKuEC4ftttkGIPZeuKXydboKJE7ZNwex4AyMXMASPLkeuysePZP9e9oLOoZBNeWzO2Sb7sl9uOGI6xFNo/MsLhT03ULpIg8qRpxIpFVshEDvkWImTo0EsM5CpWvECLq0nHubFfsT3wQZHupyhDxvfuxJmENc97rvzWGCSXoHrGTJ/mczOCbLR7+tR3AcEPpZZUJf0xebtO0t88J3hmfRMGXNhWDAO7727y8LmwxF4xwBfBTbl7z9cKr0hEd8HaZayQ/qOgGLFEpPad2a5GrXerXxu7SlilLYBUTMkg6s5r3Vc9HK6ni1PkovWJ6fY+bvd6PxlLG8IDm+kTU3H74WFhZo/LnqzGLEUx2nedR3bsaQ+ZuUZX6C2JJYz1I2NdSUmvASE04jhwlj7BQfwPTiD74rlzxKEQ5TyZ1xh5IR2W7/RXVWwD+EepwZ09opTjGa+jChnLXv1G7sbukIBXyXQsLAdynlcZnRAoafcE+NtkaLFuMc7JV+eNj3XamPFP2S9JYGdrbsGq8nPH5uCKCog3Lvk5SYEaUT3suSnZBL/CocecZSm5d/DUouNjDCfE/b5NfW8mkydvcpOp4HEqOkR9q5qlulpRj1fx5qovuriYUei1fGE5+O0I86stR7ndwiPttnyL2EPR6ym6Qp5wx/4FJgdEm4quKtvAKiNrHOYDB/Yk1cNe6l4pKlwM6PDwZq4KK/HJZ+AWmbRJcxJKeM4/zxhYlq6BQ0sRzPS6Xprzf1BQ5fsTnekTuT+z+2v/lKvE8X8tEqG4nCIdcKA2OfXT15opHog0O9grEDuvK+DZKUaOU+mN1rFBlh68A55vsrFQ5Qf8i7QiqE6+ciueCM5SDIFlAeYWMYePPqHqBkOyMws/orEcaYVgJFRFQHc4rUA6LKjZpqnTXbJWh1tKPY9XTDAesZVl5F9x0CppZhBg==
+    properties :
+     x : 8
+     y : 125
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAByo0Gq/GHt63o1tUVzbU+vXtjoR+EQ/Wq8LgL/WRnPLBjIl8WmumtVLI2pPpOLr74+MI6+fcx5UlDokZkw/bT2piZzoQuZf/5csffWpYoGjk7f5a10d9+XdIHK0sW0qK1+zvSUgws9A7+97hPUDwD3Boi51dQx/d6DYNuowaY=
+        code : |1+
+         // ZebraDWEnableDataWedge is used to enable the DataWedge scan module if it had been disabled
+         // An error will be returned if you try to enable a module which is already enabled.
+         // Disabling/enabling the module allows you to forbid / allow scan requests (by hardware/software/API)
+         ZebraDWEnableDataWedge(gsProfileName, gnTimeOut,   "WIN_Advanced_Scan.CB_EnableDataWedge", "WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_DisableDataWedge
+    identifier : 0x2d1b6e42079f5ea7
+    internal_properties : CAAAAAgAAAAG+TtPe8jW8w4jI/HD36dgSV9R630W23rdGDrg8Pj/hL+dUSCQpinaIsJ464w4UtrVKMjQjAjLWVcOt96j96cjAgfDg1JofkrKgfueWdwh0hiwQ1uGkQ8eyP1pSja0g8fJJZfO88s29fTJ5otR6/dqZCucQvS2lLNsPeYm9YLFIzSXk2mAZJ6teG6H4wOMfwri+58INHTvDZCO4TqozXifTJVyI9qbSbWkj6Giwz0cB/a2WJo/qfhdjMhVRK9OYJh07VHoC3hisk5G+d5Pj4lJCDuWbs0Spb0uBWUivhgJs6p560GgIpfr+hO01xxfaxaLEVTLpeY0CKF9cPkJfdOAtKI4o54P3QB1Ho7wSOLRVna8Gm6OEqlNpHxk0sgjkD2RtL9vYlfer4IlsGWMTX5yltmPh6k+ol8XONNSK6FLD3ZmazWYRBFdxNsw4I+zgJsVHLR2ok3bE6lW+n9CdVnkpe/sMSeXAoR63dbm0RweB33Ux7/6kwDNPp8et4HxVz4cKMHaLAu2+02sbT0+aIatIEKbvqB67v3XfVV+oaT8YQLipTZ/zNJWth/hQo/4KOSG5USZi41XW0pmzKIEX/PQB9Qlvyv5ZK7sG8lwghb3W2GvcfiNtsBOUKuuTGiY8WJ0nI0ZvMnaiFzXFluWNUyF3wzTUHLwwH0l9PboaLEe0opf8N7AXWpzBMFRnwHC4N+XmTfCQeeRnAXdJ54B9rvSl5nAFcGmlkedDYOeWgHRTmpIhy2ml3L9PCfQaZtgyWfgjDGpQInMpKZAH/UR4Sv9g+FPE6fPA74PMw+SA9q2FKgVH0diIUIxae5YmPzRJ9VofoJnzxXd04y2UEfo1fiIPD4v684IfKX7LK8MTUMM+/BaJlJq0jMYslGbG97SD2Xv3e7PDDdnXcKeRSLlGMJXcKFoTC6X+four1obVTF9Khbk8ARHjlI79zpbnFU6uNqQPAupoGngw6+lzCa8FD9U0HXNMRkfhZdcHce0LEW6LG7AhGRnnhydgl485AqzBgujP4aZp+c6x1XmV+a2zhlZLJo24O6sDHwEfss+LVaseBAWt843T63mPZht/HhuGIZ7Fql8/dEv0lf2mIboMm8TeMZ5wRJOYDTl71VNvZVeSPxCG7zOeU6pwcn1Cy7vbKl0GlMG5Z/OmdnhGKJkd0kr+fP+l2CzK4+CwImIT0lZkhrghr6yphZijP4vA6vHQeO9BAXEN9QlrCX8nvogzdRQd3FYOJACGNezl5BXGoI94DIKEXqfJlMCe3QzKc3gFCpvd6wNVlXA3NuFOM6HFdYuPHHlkeISEMOXyr4bCnPaV4ppRKe1jMc7u/DAT5gLOEuI1LWVoQ==
+    properties :
+     x : 168
+     y : 125
+     width : 144
+     height : 32
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAADDL0Mauu3LfEWJ5PEUg79r02tr+TNJ3mXJVap/vpQWcGGgrwe+C7OSUBDcHiKhSpqmtS+0diCQl9MVAIcFPEq15pLP0pT6wTdYYDf87DfEjt8MZKV70DARSsY1jfglAl4HGaOlkcSuxbq1xKVr0visyEblht1glVlPNzFIeH5ZDLRGwT8LRXO4o+vsmMw=
+        code : |1+
+         // ZebraDWDisableDataWedge is used to disable the DataWedge scan module.
+         // Once the module is disabled, it is no longer possible to scan regardless of the source of the scan request.
+         // An error will be returned if you try to disable a module which is already disabled.
+         // Disabling/enabling the module allows you to forbid / allow scan requests (by hardware/software/API)
+         ZebraDWDisableDataWedge(gsProfileName, gnTimeOut, "WIN_Advanced_Scan.CB_DisableDataWedge", "WIN_Advanced_Scan.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : STC_Scan
+    identifier : 0x2d1b6e4207a05ea7
+    internal_properties : CAAAAAgAAABUsNuOf9ml9GBFAefLSKvWWYOEtP8akkl7XDEcoKU8rfw0+c/pGfWwoQmhvHsaGwwTg6CyRdy7stQZjXZp1l0BUqEVyxydiUXp7mbQR0K70JGsFMeaIKh69AwHooGRkNF4dxKQJmO5EiQ3+3bIbTxEFhvVFTpRqP/vckaucJOJr3xznThB2GJQr+O/rJP0kbRVbDzG9EkwtpC4qJJUNbhmTmEtOWRl2soVKX850MtEbtRfAGQ+hAkJmm0d0lORvuSmF0BG3ElLCtDHZnSME8ih29uw8wl4neSgnw5qe8kcBbEaui8Y7jIPeJ7sdZjn+xV0jEj4iyX2YT6g+avkywjtDYQjaj3hzWxcyJ/VTfCLaG5hGjswvwL6BPsnVcFvbE0d+KJVx029aqHxW+91PRdwWlIFLPKWBWhUrgIipLdd9MqUH2xN/FVEWdn4zTrin2kTCUemIvClb0NOIkl0eftn78hfIUJga9TbuPObKyNbTXEerR5m1PdIJII4CreR2CBfLX4trrTXsvyodRF8ZfduML3otKbwRw==
+    properties :
+     x : 10
+     y : 90
+     width : 300
+     height : 25
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : STC_Mode
+    identifier : 0x2d1b6e4207a15ea7
+    internal_properties : CAAAAAgAAABwnM7QeIYqSpJcx6yLPb0s8F/tjtb5jpXjyOCOAgJTuj/+YF8zzNpWyHuRQi9msUg9HXdw41hx2RGfx9caCXYm3HS7YIHNv7jf/21CD8BQw/882IBa9/U9cg3w5dkDVoNYLcasmi6acRLyedGzIUlgrNyEAbdUFD97JCIIkYXLVBzK4LpSLzWzgKbJZF+ypBWcS+sfjN090xRRz4GyI9Gy67UWHkOUFGnwYJwwWl+I0HCyLpyisF2Wh13KHf5dhKoc3LrJvSETLHAkb2jYsPuQRIQyQsuUMUyNaI62Kw8dF/bLqhTR9qFwKcaljCtwq2Xy/hQBSBrLlIQdZcqE/u14Y+s/MjOmCpmJ/M9fcrhri4jRySNJCGbY5S4eBnkZfrPTB7/Mp7nRZ81tNxjETUV2/B3YmBscEzpt7TbWqHcPdHASgalspw2lIs7pALTyNGXtbedXfAWzSxoiH2C5weFBNLAlPVOCbxz1xeTWcPV/
+    properties :
+     x : 10
+     y : 205
+     width : 300
+     height : 25
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : STC_Scan_profile
+    identifier : 0x2d1b6e4207a25ea7
+    internal_properties : CAAAAAgAAABzCXO1SJJnIyrd8l+7ZkXCJSyCPTp1xk6bQ/aEqywWp/8Rc1YAj5fAutsPPRqld8KBI/kxjv8Mex2z3dBhFQ+We3uHF5UR4d31Gi9F8g2COuqtCMFbxrF1EYttnl7fox779LwYNFXM5d3i9/rDGbRZRqNtvOISkWYTMMm5pL8qS45zKp6Ud9Rn/K+EqXnbfTZqkoikrys+sg6DJvZgSNQkOAizXbixeCvJ3kyBdcOzafxXsXDtbAc0YS8DCGPb5vX9qoV6xds676dBeaKqJTq6TSzoR8FZrGQmBUuqDjtoh5Pt35AAQGT4xnzJ1pi6eKMyPnraqqY3fYm9UfCiitPukotPnRxzqOTHLvt2EPsIDwdKcFpquoeQA55l4MMQF5PD8F84BGttVTuNv+qIr4vl+snWlUbqDcUvrCVo7oNkBPjzyvD26hmtlZARtEHjXf70XBF8xcg90y+ALwxtp6grBR62ReTVT90mKjjFN7VaDVa1WbHbZSBSbpqVX3nomMQ08dYqxWiD+TG2NayIScDIRDUIT9/519PAUqcs
+    properties :
+     x : 10
+     y : 287
+     width : 300
+     height : 25
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+ actionbar :
+  name : ACTB_ActionBar
+  identifier : 0x2d1b6e4207a35ea7
+  internal_properties : CAAAAAgAAADLz5/oX9qCB5gSPxZyQUbdGd8jBrwReafhtCGYybbS4Y5QLsjEolQRSy5V7ceqrRdmLIjkxOL4RbEXgBz1UP52TI1KKEkJFo3660xt+g5WUTenc2aixomKsk9aPLsBrMGT6BdqkqNsQih1BF8TR/8H05LvCpmgmHM9+ILZrG+RS3UUvxw165WFI1OnUNjqxgYcVg98R37DPuC48Nl1RK2sO6rW+1fQ8N4+tBL+BtaxpX/fQvndCfQLrFnMhiMOL0dghazlM4KOscMue+2o+Zr+cPA4EyyJ+pZ25i4WooJcX2S7XhXJNKiYsgBjHs9iZ3Dz/BcbEr0hICR7KKAa0p6VVT8xotxLrM6sklwB+xh9/P7fkIy90+Bo7VLliI1D+6pSVS7SNkaioCns5qbO
+  controls : []
+  code_elements :
+   type_code : 125
+   p_codes :
+    -
+      type : 229
+      enabled : false
+    -
+      type : 239
+      enabled : false
+    -
+      type : 240
+      enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x29f8144500a4e5ba
+  internal_properties : CAAAAAgAAADgMVTORwj2Mt8z/R5WRL0mTVIMDO11ij5YdBwcO3ZAw8tWdEBL95DgWGGgMGBRKql5dANp5Vg/qpNyJvJQ8sIrr6GzC+masJIwyV5P7DpW0go2kGsf4EvdW1eqlu6V7I5EHVrMjd02cTaXwP0dbd1DSbdsd/Wxk0ScMGI7Z0eDsGOMLRfieoTYskOjcLtA7tgFoR24z+3d3zH3Bloaoqj6XKllvOzqHQUKs5ikiJtsiZpXF9leDIYykRzjnC4k4qQVjthAFpugw+diG+HfnEMv+L/rU3DRjlIiDq+0aeUP
+  options : []
+ languages :
+  - en-GB
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAABKff4sxysR+9kg8GIJ708iDvb5GJxqytSUKL54fomJ9xlu42EWUFv/+en+BSQDmdB2krqVslwL/1eyQDVw8sffQk7lF3aDfZNzV/+zROsnKAy1jaSejRR5UgML
+ code_elements :
+  internal_properties : CAAAAAgAAAC5av1dtTlQaCkdLQ555o8w2C7bXskj9sdemFpkUm+9ABhLE3t7wWJ1wwLcFMahsv2yqafIVwvglpryf5abNVVsakvp0LZU/YFRzGR9
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      Procédure MyWindow()
+      gsTextStatus is string = ""
+   -
+     code : |1-
+      
+     type : 34
+   -
+     code : |1+
+      
+      
+     type : 234
+   -
+     code : |1+
+      
+      
+     type : 165
+   -
+     code : |1-
+      
+     type : 177
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     internal_properties : CAAAAAgAAABQHwz6r71+uPMO0y5i14zv+4ARTWTVNB5ZY6cT1Z+GD2c4fBkNrTfvPqrbucWCb2R34D+PU6Vd3Ke4yuXH2AtTkNuy/wJ2O1hNMerYbXgx1SbtjFXttQ3TrwVXdmRHVhl6oSP3HsV6g8ApwQ==
+     code : |1+
+      // When the window is closed, it is necessary to delete the BroadcastReceiver
+      // saved on the window to avoid any memory leak.
+      // Run ZebraDWCleanBroadcastReceiver
+      ZebraDWCleanBroadcastReceiver("WIN_Advanced_Scan.CB_CleanBroadcastReceiverSuccess", "WIN_Advanced_Scan.CB_CleanBroadcastReceiverError")
+     type : 2
+   -
+     internal_properties : CAAAAAgAAABKtXZQVT6tyBc2O8Y+U4Qrb3itwYAR7D6lOwdbCYsOwwv40B3BmXfXwoIz6UG+99iTSAPLvxfr6ul+HLcRYvlt/smcKdS4aYbHv1xCl1LX3/QTRk+/jxPhYQupGEZxdGsw94UpEXtg6XqTuw==
+     code : |1+
+      // The scan callback is saved to receive the scanned data in this window when it gains focus
+      ZebraDWSaveScanCallback("WIN_Advanced_Scan.CB_ProcessScan", "WIN_Advanced_Scan.CB_SaveCallbackSuccess", "WIN_Advanced_Scan.CB_SaveCallbackError")
+     type : 11
+   -
+     code : |1+
+      
+      
+     type : 12
+   -
+     internal_properties : CAAAAAgAAABKtXZQVT6tyBc2O8Y+U4Qrb3itwYAR7D6lOwdbCYsOwwv40B3BmXfXwoIz6UG+99iTSAPLvxfr6ul+HLcRYvlt/smcKdS4aYbHv1xCl1LX3/QTRk+/jxPhYQupGEZxdGsw94UpEXtg6XqTuw==
+     code : |1+
+      // The scan callback is saved in order to receive the scanned data in this window when it returns to the foreground
+      ZebraDWSaveScanCallback("WIN_Advanced_Scan.CB_ProcessScan", "WIN_Advanced_Scan.CB_SaveCallbackSuccess", "WIN_Advanced_Scan.CB_SaveCallbackError")
+      
+     type : 220
+   -
+     code : |1+
+      // The scan callback is deleted to avoid receiving scan messages in this window
+      ZebraDWDeleteScanCallback("WIN_Advanced_Scan.CB_DeleteCallbackSuccess", "WIN_Advanced_Scan.CB_DeleteCallbackError")
+     type : 221
+  procedures :
+   -
+     name : CB_ProfileExist
+     procedure_id : 2097391281304002215
+     type_code : 14
+     code : |1-
+      // Summary: Procedure run when the method ZebraDWCheckfProfileExists is run successfully
+      // Syntax:
+      //CB_ProfileExist (<sProfileName> is string, <bProfileExist> is boolean)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      //	bProfileExist (boolean): True uf the profile exists
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_ProfileExist(sProfileName is string, bProfileExist is boolean)
+      
+      if bProfileExist = True then
+      	AddLineToStatus("The profile " + sProfileName + " exists.")
+      else
+      	AddLineToStatus("The profile " + sProfileName + " does not exist.")
+      end
+     type : 458752
+   -
+     name : CB_Error
+     procedure_id : 2097391281304067751
+     type_code : 14
+     code : |1+
+      // Summary: Procedure executed when a method encounters an error 
+      // Syntax:
+      //CB_Error (<sProfileName> is string, <sMessage> is string, <sError> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of the profile affected by the error
+      //	sMessage (UNICODE string): Message associated with the error
+      //	sError (UNICODE string): Details of the error
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_Error(sProfileName is string, sMessage is string, sError is string)
+      AddLineToStatus(sProfileName + " : " + sMessage);
+      if sError <> "" then
+      	AddLineToStatus("Error details: ")
+      	AddLineToStatus(sError)
+      end
+     type : 458752
+   -
+     name : AddLineToStatusT
+     procedure_id : 2097391281304133287
+     type_code : 14
+     code : |1+
+      // Summary: Adds a LINE of text in the element EDT_STATUS in the main thread
+      // Syntax:
+      //AddLineToStatusT (<sLineToAdd> is string)
+      //
+      // Parameters:
+      //	sLineToAdd (UNICODE string): Line to add
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private AddLineToStatusT(sLineToAdd is string)
+      gsTextStatus += sLineToAdd + CR
+      EDT_Status = gsTextStatus
+      EDT_Status..Cursor = Length(EDT_Status)+1
+      
+     type : 458752
+   -
+     name : CB_ProfileDeleted
+     procedure_id : 2097391281304198823
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWDeleteAProfile is run successfully
+      // Syntax:
+      //CB_ProfileDeleted (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_ProfileDeleted(sProfileName is string)
+      AddLineToStatus("The profile " + sProfileName + " has been successfully deleted.")
+     type : 458752
+   -
+     name : CB_ProfileInitialized
+     procedure_id : 2097391281304264359
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWInitializeAProfile is run successfully
+      // Syntax:
+      //CB_ProfileInitialized (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_ProfileInitialized(sProfileName is string)
+      AddLineToStatus("The profile " + sProfileName + " has been successfully initialized.")
+      
+     type : 458752
+   -
+     name : CB_ProfileCreated
+     procedure_id : 2097391281304329895
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWCreateAProfile is run successfully
+      // Syntax:
+      //CB_ProfileCreated (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_ProfileCreated(sProfileName is string)
+      AddLineToStatus("The profile " + sProfileName + " has been successfully created.")
+     type : 458752
+   -
+     name : CB_ProcessScan
+     internal_properties : CAAAAAgAAAAwX/UB1t5D9nrSF1lwYLcgMx5PCNZ4NVMgdmMFxe50ZtgADOLavMBHHFWSbdIdB3lrnLg8UoBTZjKW7JaWxHJOjcSNUXqk7hpD8Mr1oeK3/bw+Zxp1CbyvjkGnfJ/9D0pyNWfKdLRkc/RVhta57tXgZ4nkYFUP3tnjZlD7GHd9pJHvQvtntfQ1jIecQXg3c1lYbZIumt96fr2+OOxnwxVBMiK9Sg==
+     procedure_id : 2097391281304395431
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the window receives a scan result
+      // Syntax:
+      //CB_ProcessScan (<sData> is string, <sSymbology> is string)
+      //
+      // Parameters:
+      //	sData (UNICODE string): Content of the scanned element
+      //	sSymbology (UNICODE string): Symbology of the scanned element (ex: PDF128, QRCODE, EAN13, etc.)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_ProcessScan(sData is string, sSymbology is string)
+      AddLineToStatus("Scanned data: " + sData)
+      AddLineToStatus("Symbology: " + sSymbology)
+      
+     type : 458752
+   -
+     name : CB_ProfileAggressive
+     procedure_id : 2097391281304460967
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWModifyScannerSettings is run successfully
+      // Syntax:
+      //CB_ProfileAggressive (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_ProfileAggressive(sProfileName is string)
+      AddLineToStatus("The scanner settings for the profile " + sProfileName + " have been successfully modified in aggressive mode.")
+     type : 458752
+   -
+     name : CB_ProfileNormal
+     procedure_id : 2097391281304526503
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWModifyScannerSettings is run successfully
+      // Syntax:
+      //CB_ProfileNormal (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_ProfileNormal(sProfileName is string)
+      AddLineToStatus("The scanner settings for the profile " + sProfileName + " have been successfully modified in normal mode.")
+     type : 458752
+   -
+     name : CB_StopScan
+     procedure_id : 2097391281304592039
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWStopScan is run successfully
+      // Syntax:
+      //CB_StopScan (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_StopScan(sProfileName is string)
+      AddLineToStatus("The scanner for the profile " + sProfileName + " has been successfully stopped.")
+     type : 458752
+   -
+     name : CB_StartScan
+     procedure_id : 2097391281304657575
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWStartScan is run successfully 
+      // Syntax:
+      //CB_StartScan (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_StartScan(sProfileName is string)
+      AddLineToStatus("The scanner for the profile " + sProfileName + " has been successfully started.")
+      
+      
+     type : 458752
+   -
+     name : CB_DisableDataWedge
+     procedure_id : 2097391281304723111
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWDisableDataWedge is run successfully 
+      // Syntax:
+      //CB_DisableDataWedge (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_DisableDataWedge(sProfileName is string)
+      AddLineToStatus("The DataWedge plugin for the profile " + sProfileName + " has been successfully disabled.")
+     type : 458752
+   -
+     name : CB_EnableDataWedge
+     procedure_id : 2097391281304788647
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWEnableDataWedge ends successfully
+      // Syntax:
+      //CB_EnableDataWedge (<sProfileName> is string)
+      //
+      // Parameters:
+      //	sProfileName (UNICODE string): Name of profile (visible in the DataWedge graphical interface)
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraDWEnableDataWedge(gsProfileName, gnTimeOut,   "WIN_Advanced_Scan.CB_EnableDataWedge", "WIN_Advanced_Scan.CB_Error")
+      //
+      Procédure CB_EnableDataWedge(sProfileName is string)
+      AddLineToStatus("The DataWedge plugin for the profile " + sProfileName + " has been successfully enabled.")
+     type : 458752
+   -
+     name : AddLineToStatus
+     procedure_id : 2097391281304854183
+     type_code : 14
+     code : |1+
+      // Summary: Adds a line of text in the element EDT_STATUS
+      // Syntax:
+      //AddLineToStatus (<sLineToAdd> is string)
+      //
+      // Parameters:
+      //	sLineToAdd (UNICODE string): Text to add to the component of Status
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // AddLineToStatus("Text to add")
+      //
+      Procédure AddLineToStatus(sLineToAdd is string)
+      ExecuteMainThread(AddLineToStatusT,sLineToAdd)
+     type : 458752
+   -
+     name : CB_SaveCallbackSuccess
+     procedure_id : 2097391281304919719
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method is run successfully
+      // Syntax:
+      //CB_SaveCallbackSuccess (<sProcedureName> is string)
+      //
+      // Parameters:
+      //	sProcedureName (UNICODE string): Name of the procedure
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_SaveCallbackSuccess(sProcedureName is string)
+      AddLineToStatus("The procedure " + sProcedureName + " has been successfully referenced.")
+      
+     type : 458752
+   -
+     name : CB_SaveCallbackError
+     procedure_id : 2097391281304985255
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method is run successfully
+      // Syntax:
+      // CB_SaveCallbackError (<sProcedureName> is string, <sMessage> is string)
+      //
+      // Parameters:
+      //	sProcedureName (UNICODE string): Name of the procedure
+      //	sMessage (UNICODE string): Error message
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_SaveCallbackError(sProcedureName is string, sMessage is string)
+      AddLineToStatus("Error referencing the procedure: " + sProcedureName);
+      if sMessage <> "" then
+      	AddLineToStatus("Error details: ")
+      	AddLineToStatus(sMessage)
+      end
+      
+     type : 458752
+   -
+     name : CB_DeleteCallbackSuccess
+     procedure_id : 2097391281305050791
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWDeleteScanCallback is run successfully 
+      // Syntax:
+      //CB_DeleteCallbackSuccess (<sProcedureName> is string)
+      //
+      // Parameters:
+      //	sProcedureName (UNICODE string): Name of the procedure
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_DeleteCallbackSuccess(sProcedureName is string)
+      AddLineToStatus("The procedure " + sProcedureName + " has been successfully de-referenced.")
+      
+     type : 458752
+   -
+     name : CB_DeleteCallbackError
+     procedure_id : 2097391281305116327
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWDeleteScanCallback encounters an error
+      // Syntax:
+      // CB_DeleteCallbackError (<sProcedureName> is string, <sMessage> is string)
+      //
+      // Parameters:
+      //	sProcedureName (UNICODE string): Name of the procedure
+      //	sMessage (UNICODE string): Error message
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_DeleteCallbackError(sProcedureName is string, sMessage is string)
+      AddLineToStatus("Error de-referencing the procedure: " + sProcedureName);
+      if sMessage <> "" then
+      	AddLineToStatus("Error details: ")
+      	AddLineToStatus(sMessage)
+      end
+      
+     type : 458752
+   -
+     name : CB_CleanBroadcastReceiverSuccess
+     procedure_id : 2097391281305181863
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWCleanBroadcastReceiver is run successfully 
+      // Syntax:
+      //CB_CleanBroadcastReceiverSuccess (<sProcedureName> is string)
+      //
+      // Parameters:
+      //	sProcedureName (UNICODE string): Name of the procedure
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_CleanBroadcastReceiverSuccess(sProcedureName is string)
+      AddLineToStatus("The broadcast receiver associated with the procedure " + sProcedureName + " has been successfully deleted.")
+      
+      
+     type : 458752
+   -
+     name : CB_CleanBroadcastReceiverError
+     procedure_id : 2097391281305247399
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the method ZebraDWCleanBroadcastReceiver encounters an error
+      // Syntax:
+      // CB_CleanBroadcastReceiverError (<sProcedureName> is string, <sMessage> is string)
+      //
+      // Parameters:
+      //	sProcedureName (UNICODE string): Name of the procedure
+      //	sMessage (UNICODE string): Error message
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_CleanBroadcastReceiverError(sProcedureName is string, sMessage is string)
+      AddLineToStatus("Error deleting the broadcast receiver associated with the procedure: " + sProcedureName);
+      if sMessage <> "" then
+      	AddLineToStatus("Error details: ")
+      	AddLineToStatus(sMessage)
+      end
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAAB6ragasMBWLfpsSyU19J6lAvYEqFWd1xYOjmHr1XHVZOVmechqLo1vKvfoAJhHeXL59P8BudVQfrBZ/U9vpjDz5RFibMKKm/84EA==
+  original_name : _11
+resources :
+ string_res :
+  identifier : 0x1b183c6700482d8a
+  internal_properties : CAAAAAgAAACyXVFaObH4lOGSEHJoZf1MD49w+XTw2LScZCP/urkWFwy+HYJdyQ3umA==
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

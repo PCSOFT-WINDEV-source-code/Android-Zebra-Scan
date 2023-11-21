@@ -1,0 +1,61 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CZebraDWProfilePluginKeystroke
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1bb3403a00d1e7e2
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      CZebraDWProfilePluginKeystroke is class, Serialize = "PluginKeystroke"
+      	m_bkeystroke_output_enabled is boolean = False, Serialize = "keystroke_output_enabled"
+      	m_ekeystroke_action_character is EACTION_CHAR, Serialize = "keystroke_action_character"
+      	m_nkeystroke_delay_control_characters is int = 0, Serialize = "keystroke_delay_control_characters"
+      	m_nkeystroke_character_delay is int = 0, Serialize = "keystroke_character_delay"
+      	m_bkeystroke_delay_multibyte_chars_only is boolean = False, Serialize = "keystroke_delay_multibyte_chars_only"
+      end
+      
+      EACTION_CHAR is énumération
+      	ASCII_NO_VALUE	 = "NONE"
+      	ASCII_TAB_VALUE	 = "TAB"
+      	ASCII_LF_VALUE	 = "LF"
+      	ASCII_CR_VALUE	 = "CR"
+      end
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1996009677721364450
+     type_code : 27
+     code : |1+
+      Procédure Constructor()
+      m_ekeystroke_action_character = EACTION_CHAR.ASCII_NO_VALUE;
+      
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1996009677721429986
+     type_code : 28
+     code : |1+
+      Procédure Destructor()
+      
+     type : 655360
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1bb3403100cbc3b1
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

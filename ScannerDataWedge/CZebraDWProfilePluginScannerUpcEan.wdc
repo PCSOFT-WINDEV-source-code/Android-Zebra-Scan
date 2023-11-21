@@ -1,0 +1,94 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CZebraDWProfilePluginScannerUpcEan
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1bb3650900f9aef4
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      CZebraDWProfilePluginScannerUpcEan is class, Serialize = "UpcEan"
+      	m_bdatabar_to_upc_ean is boolean = False, Serialize = "databar_to_upc_ean"
+      	m_bupcean_bookland is boolean = False, Serialize = "upcean_bookland"
+      	m_eupcean_bookland_format is SC_E_UPCEAN_BOOKLAND_FORMAT, Serialize = "upcean_bookland_format"
+      	m_bupcean_coupon is boolean = False, Serialize = "upcean_coupon"
+      	m_eupcean_coupon_report is SC_E_UPCEAN_COUPON_REPORT, Serialize = "upcean_coupon_report"
+      	m_bupcean_ean_zero_extend is boolean = False, Serialize = "upcean_ean_zero_extend"
+      	m_nupcean_retry_count is int = 10, Serialize = "upcean_retry_count"
+      	m_eupcean_security_level is SC_E_UPCEAN_SECURITY_LEVEL, Serialize = "upcean_security_level"
+      	m_bupcean_supplemental2 is boolean = True, Serialize = "upcean_supplemental2"
+      	m_bupcean_supplemental5 is boolean = True, Serialize = "upcean_supplemental5"
+      	m_eupcean_supplemental_mode is SC_E_UPCEAN_SUPPLEMENTAL_MODE, Serialize = "upcean_supplemental_mode"
+      	m_bupcean_linear_decode is boolean = False, Serialize = "upcean_linear_decode"
+      	m_bupcean_random_weight_check_digit is boolean = False, Serialize = "upcean_random_weight_check_digit"
+      end
+      
+      SC_E_UPCEAN_BOOKLAND_FORMAT is énumération
+      	FORMAT_ISBN_10 = "0"
+      	FORMAT_ISBN_13 = "1"
+      end
+      
+      SC_E_UPCEAN_COUPON_REPORT is énumération
+      	OLD_COUPON_REPORT_MODE	 = "0"
+      	NEW_COUPON_REPORT_MODE	 = "1"
+      	BOTH_COUPON_REPORT_MODES = "2"
+      end
+      
+      SC_E_UPCEAN_SECURITY_LEVEL is énumération
+      	SECURITY_LEVEL_0 = "0"
+      	SECURITY_LEVEL_1 = "1"
+      	SECURITY_LEVEL_2 = "2"
+      	SECURITY_LEVEL_3 = "3"
+      end
+      
+      SC_E_UPCEAN_SUPPLEMENTAL_MODE is énumération
+      	NO_SUPPLEMENTALS			 = "0"
+      	SUPPLEMENTAL_ALWAYS			 = "1"
+      	SUPPLEMENTAL_AUTO			 = "2"
+      	SUPPLEMENTAL_SMART			 = "3"
+      	SUPPLEMENTAL_378_379		 = "4"
+      	SUPPLEMENTAL_978_979		 = "5"
+      	SUPPLEMENTAL_414_419_434_439 = "6"
+      	SUPPLEMENTAL_977			 = "7"
+      end
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1996050149200801524
+     type_code : 27
+     code : |1+
+      Procédure Constructor()
+      m_eupcean_bookland_format = SC_E_UPCEAN_BOOKLAND_FORMAT.FORMAT_ISBN_10
+      m_eupcean_coupon_report = SC_E_UPCEAN_COUPON_REPORT.BOTH_COUPON_REPORT_MODES
+      m_eupcean_security_level = SC_E_UPCEAN_SECURITY_LEVEL.SECURITY_LEVEL_1
+      m_eupcean_supplemental_mode = SC_E_UPCEAN_SUPPLEMENTAL_MODE.NO_SUPPLEMENTALS
+      
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1996050149200867060
+     type_code : 28
+     code : |1+
+      Procédure Destructor()
+      
+     type : 655360
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1bb364fd00f380cf
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

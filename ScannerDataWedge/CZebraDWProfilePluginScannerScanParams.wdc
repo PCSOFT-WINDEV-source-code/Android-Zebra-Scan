@@ -1,0 +1,69 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CZebraDWProfilePluginScannerScanParams
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1bb369cf010d5454
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      CZebraDWProfilePluginScannerScanParams is class, Serialize = "ScanParams"
+      	m_ecode_id_type is SC_E_CODE_ID_TYPE, Serialize = "code_id_type"
+      	m_bdecode_haptic_feedback is boolean = False, Serialize = "decode_haptic_feedback"
+      	m_sdecode_audio_feedback_uri is string = "content://media/external/audio/media/null", Serialize = "decode_audio_feedback_uri"
+      	m_bdecoding_led_feedback is boolean = False, Serialize = "decoding_led_feedback"
+      	m_ngood_decode_led_timer is int = 75, Serialize = "good_decode_led_timer" //0-1000
+      	m_evolume_slider_type is SC_E_VOLUME_SLIDER_TYPE, Serialize = "volume_slider_type"
+      	
+      end
+      
+      SC_E_CODE_ID_TYPE is énumération
+      	CODE_ID_TYPE_NONE	 = "0"
+      	CODE_ID_TYPE_AIM	 = "1"
+      	CODE_ID_TYPE_SYMBOL	 = "2"
+      end
+      
+      SC_E_VOLUME_SLIDER_TYPE is énumération
+      	RINGER			 = "0"
+      	MUSIC_AND_MEDIA	 = "1"
+      	ALARMS			 = "2"
+      	NOTIFICATION	 = "3"
+      end
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1996055397652124756
+     type_code : 27
+     code : |1+
+      Procédure Constructor()
+      m_ecode_id_type = SC_E_CODE_ID_TYPE.CODE_ID_TYPE_NONE
+      m_evolume_slider_type = SC_E_VOLUME_SLIDER_TYPE.NOTIFICATION
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1996055397652190292
+     type_code : 28
+     code : |1+
+      Procédure Destructor()
+      
+     type : 655360
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1bb369c601073023
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

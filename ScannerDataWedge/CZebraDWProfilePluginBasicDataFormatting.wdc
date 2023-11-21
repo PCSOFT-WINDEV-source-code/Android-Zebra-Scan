@@ -1,0 +1,55 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CZebraDWProfilePluginBasicDataFormatting
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1bb3402e00c7b7ca
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CZebraDWProfilePluginBasicDataFormatting is class, Serialize = "PluginBasicDataFormatting"
+      	m_bBdf_enabled  is boolean = False, Serialize = "bdf_enabled"
+      	m_sbdf_prefix  is string = "", Serialize = "bdf_prefix"
+      	m_sbdf_suffix  is string = "", Serialize = "bdf_suffix"
+      	m_bbdf_send_data  is boolean = True, Serialize = "bdf_send_data"
+      	m_bbdf_send_hex  is boolean = False	, Serialize = "bdf_send_hex"
+      	m_bbdf_send_tab  is boolean = False, Serialize = "bdf_send_tab"
+      	m_bbdf_send_enter  is boolean = False, Serialize = "bdf_send_enter"
+      end
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1996009626181089226
+     type_code : 27
+     code : |1+
+      Procédure Constructor()
+      
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1996009626181154762
+     type_code : 28
+     code : |1+
+      Procédure Destructor()
+      
+     type : 655360
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1bb3402400c190ba
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

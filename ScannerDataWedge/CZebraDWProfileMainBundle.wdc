@@ -1,0 +1,58 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CZebraDWProfileMainBundle
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1bb3401400b350a4
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      CZebraDWProfileMainBundle is class, Serialize = "MainBundle"
+      	m_bPROFILE_ENABLED is boolean = True, Serialize = "PROFILE_ENABLED"
+      	m_eCONFIG_MODE is ECONFIG_MODE, Serialize = "CONFIG_MODE"
+      	m_sPACKAGE_NAME is string ANSI = "", Serialize = "PACKAGE_NAME"
+      	ACTIVITY_LIST is array of strings
+      end
+      
+      ECONFIG_MODE is énumération
+      	CREATE_IF_NOT_EXIST = "CREATE_IF_NOT_EXIST"
+      	OVERWRITE = "OVERWRITE"
+      	UPDATE = "UPDATE"
+      end
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1996009514510602404
+     type_code : 27
+     code : |1+
+      Procédure Constructor()
+      m_eCONFIG_MODE = CREATE_IF_NOT_EXIST
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1996009514510667940
+     type_code : 28
+     code : |1+
+      Procédure Destructor()
+      
+     type : 655360
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1bb3400100ad07e3
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
